@@ -2,6 +2,7 @@
 #include <ctime>
 #include "Place.h"
 #include "Date.h"
+#include "ProductInfo.h"
 #pragma once
 
 const size_t COUNT_UNITS = 6;
@@ -43,7 +44,7 @@ public:
 	const Place& get_place() const;
 	const std::string& get_comment() const;
 
-	std::string get_short_info() const;
+	ProductInfo get_short_info() const;
 	void increase_quantity(size_t);
 	void decrease_quantity(size_t);
 private:

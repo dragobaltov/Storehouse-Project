@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iostream>
 #include <cassert>
 #include "Place.h"
 #include "Date.h"
@@ -179,9 +180,9 @@ std::istream& operator>>(std::istream& in, Product& pr)
 	return in;
 }
 
-std::string Product::get_short_info() const
+ProductInfo Product::get_short_info() const
 {
-	return std::to_string(m_quantity) + ' ' + m_unit + " of " + m_name + " at " + m_place.get_string_representation();
+	return {m_name, m_unit, m_quantity, m_place};
 }
 
 void Product::increase_quantity(size_t quantity_to_add)

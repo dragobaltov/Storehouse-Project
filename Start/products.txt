@@ -3,8 +3,33 @@ Name: banani
 Expiration Date: 2020-06-12
 Arrival Date: 2020-05-10
 Manifacturer: Horeisho
+Quantity: 8 kg
+Place in the storehouse: section 1, shelf 1, number 1
+Comment: best
+Name: banani
+Expiration Date: 2020-06-12
+Arrival Date: 2020-05-10
+Manifacturer: Horeisho
 Quantity: 12 kg
 Place in the storehouse: section 1, shelf 1, number 1
 Comment: best
+Name: bananni na kolko
+Expiration Date: 2002-12-12
+Arrival Date: 2020-05-13
+Manifacturer: kolio
+Quantity: 2 kg
+Place in the storehouse: section 3, shelf 3, number 3
+Comment: adel
 Changes:
 added 12 kg of banani at section 1, shelf 1, number 1 2020-05-12
+added 12 kg of hot dog at section 5, shelf 4, number 5 2020-05-12
+added 10 kg of new hot dog at section 5, shelf 4, number 3 2020-05-12
+cleaned 12 kg of hot dog at section 5, shelf 4, number 5 2020-05-12
+cleaned 10 kg of new hot dog at section 5, shelf 4, number 3 2020-05-12
+added 2 kg of bananni na kolko at section 3, shelf 3, number 3 2020-05-13
+added 12 kg of banani at section 1, shelf 1, number 1 2020-05-12
+added 12 kg of hot dog at section 5, shelf 4, number 5 2020-05-12
+added 10 kg of new hot dog at section 5, shelf 4, number 3 2020-05-12
+cleaned 12 kg of hot dog at section 5, shelf 4, number 5 2020-05-12
+cleaned 10 kg of new hot dog at section 5, shelf 4, number 3 2020-05-12
+removed 4 kg of banani at section 1, shelf 1, number 1 2020-05-13

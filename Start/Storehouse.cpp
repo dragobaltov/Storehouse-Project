@@ -22,6 +22,10 @@ void Storehouse::increase_quantity_of(const Product& product)
 	size_t section = product.get_place().get_section();
 
 	m_sections[section - 1].increase_quantity_of(product);
+
+	Change ch = Change(ChangeType::added, product.get_short_info(), Date::current_date());
+	m_changes.emplace_back(ch);
+	std::cout << ch;
 }
 
 void Storehouse::remove_product(const std::string& name, size_t quantity)
@@ -62,19 +66,19 @@ void Storehouse::remove_product(const std::string& name, size_t quantity)
 		Change ch;
 		Date curr_date = Date::current_date();
 		size_t section = 0;
-		std::string info = "";
+		ProductInfo pr_info{};
 		size_t quantity_to_remove = 0;
 
 		for (size_t i = 0; i < products.size() && quantity > 0; i++)
 		{
 			section = products[i].get_place().get_section();
 			quantity_to_remove = fmin(products[i].get_quantity(), quantity);
-			info = std::to_string(quantity_to_remove) + " " + products[i].get_unit() + " of " + products[i].get_name() +
-				" at " + products[i].get_place().get_string_representation();
+			pr_info = ProductInfo(products[i].get_name(), products[i].get_unit(),
+				quantity_to_remove, products[i].get_place());
 
 			m_sections[section - 1].remove(products[i], quantity_to_remove);
 
-			ch = Change(ChangeType::removed, info, curr_date);
+			ch = Change(ChangeType::removed, pr_info, curr_date);
 			m_changes.emplace_back(ch);
 			std::cout << ch;
 
@@ -96,7 +100,7 @@ void Storehouse::clean()
 		{
 			if (m_sections[i][j].get_expiration_date() <= curr_date)
 			{
-				ch = Change(ChangeType::removed, m_sections[i][j].get_short_info(), curr_date);
+				ch = Change(ChangeType::cleaned, m_sections[i][j].get_short_info(), curr_date);
 
 				bool is_removed = m_sections[i].remove(m_sections[i][j], m_sections[i][j].get_quantity());
 
@@ -133,9 +137,33 @@ void Storehouse::log(const Date& date1, const Date& date2) const
 	}
 }
 
+void Storehouse::loss(const std::string& name, double price, const Date& date1, const Date& date2) const
+{
+	double loss = 0;
+
+	if (date1 > date2)
+	{
+		std::cout << "No loss from " << name << ".\n";
+		return;
+	}
+
+	for (size_t i = 0; i < m_changes.size(); ++i)
+	{
+		Date date = m_changes[i].get_date();
+
+		if (m_changes[i].get_info().get_name() == name &&
+			m_changes[i].get_type() == ChangeType::cleaned && date >= date1 && date <= date2)
+		{
+			loss += m_changes[i].get_info().get_quantity() * price;
+		}
+	}
+
+	std::cout << "Loss: " << loss << '\n';
+}
+
 bool Storehouse::place_is_free(const Place& place) const
 {
-	return m_sections[place.get_section()].place_is_free(place);
+	return m_sections[place.get_section() - 1].place_is_free(place);
 }
 
 void Storehouse::print_products(std::ostream& out) const

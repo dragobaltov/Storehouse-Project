@@ -1,6 +1,6 @@
 #pragma once
-#include "Product.h"
 #include "Date.h"
+#include "ProductInfo.h"
 #include <string>
 #include <vector>
 
@@ -8,6 +8,7 @@ enum class ChangeType
 {
 	added,
 	removed,
+	cleaned,
 	undefined
 };
 
@@ -15,12 +16,14 @@ class Change
 {
 public:
 	Change();
-	Change(ChangeType, const std::string&, const Date&);
+	Change(ChangeType, const ProductInfo&, const Date&);
 	void print(std::ostream&) const;
 	const Date& get_date() const;
+	const ChangeType get_type() const;
+	const ProductInfo& get_info() const;
 private:
 	ChangeType m_type{ChangeType::undefined};
-	std::string m_product_info{""};
+	ProductInfo m_product_info{};
 	Date m_date{};
 };
 

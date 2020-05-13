@@ -6,9 +6,9 @@
 #include <regex>
 
 const std::regex DATE_FORMAT("^([1-9][0-9]*)-((0?[1-9])|(1[0-2]))-((0?[1-9])|([1-2][0-9])|3[0-1])$");
-const size_t COUNT_COMMANDS = 11;
+const size_t COUNT_COMMANDS = 12;
 const std::string VALID_COMMANDS[COUNT_COMMANDS] = { "open", "save", "saveas", "close", "exit", "help",
-									  "print", "add", "remove", "clean", "log" };
+									  "print", "add", "remove", "clean", "log", "loss" };
 
 class StorehouseEngine : public Engine
 {
@@ -28,6 +28,7 @@ private:
 	void remove();
 	void log(const Date&, const Date&) const;
 	void clean();
+	void loss() const;
 
 	void read_place(Place&) const;
 };

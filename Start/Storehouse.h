@@ -20,6 +20,7 @@ public:
 	void clean();
 	void log(const Date&, const Date&) const;
 	void increase_quantity_of(const Product&);
+	void loss(const std::string&, double, const Date&, const Date&) const;
 
 	Place product_place(const Product&) const;
 	bool place_is_free(const Place&) const;

@@ -1,0 +1,11 @@
+﻿  Change.cpp
+  Product.cpp
+  Section.cpp
+  Start.cpp
+  Storehouse.cpp
+C:\Users\USER\source\repos\Storehouse-Project\Start\Product.cpp(253,12): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\USER\source\repos\Storehouse-Project\Start\Storehouse.cpp(75,29): warning C4244: '=': conversion from 'double' to 'size_t', possible loss of data
+  StorehouseEngine.cpp
+  Generating Code...
+C:\Users\USER\source\repos\Storehouse-Project\Start\Storehouse.cpp(322,12): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Start.vcxproj -> C:\Users\USER\source\repos\Storehouse-Project\x64\Debug\Start.exe

@@ -12,6 +12,7 @@ void StorehouseEngine::help() const
 	std::cout << "remove - removes a product by given name and quantity\n";
 	std::cout << "clean - clears all expired products\n";
 	std::cout << "log <from> <to> - gives information about all changes in the period <from> <to>\n";
+	std::cout << "loss - estimates the loss by a given product, price and period\n";
 }
 
 void StorehouseEngine::print() const
@@ -35,7 +36,6 @@ void StorehouseEngine::add()
 
 	std::string name;
 	std::string exp_date;
-	std::string arrival_date;
 	std::string manif_name;
 	std::string unit;
 	size_t quantity;
@@ -46,8 +46,6 @@ void StorehouseEngine::add()
 	std::getline(std::cin, name);
 	std::cout << "> Expiration date(yyyy-mm-dd): ";
 	std::getline(std::cin, exp_date);
-	std::cout << "> Arrival date(yyyy-mm-dd): ";
-	std::getline(std::cin, arrival_date);
 	std::cout << "> Manifacturer: ";
 	std::getline(std::cin, manif_name);
 	std::cout << "> Unit: ";
@@ -58,7 +56,7 @@ void StorehouseEngine::add()
 	std::cout << "> Comment: ";
 	std::getline(std::cin, comment);
 
-	Product pr{ name, exp_date, arrival_date, manif_name, unit, quantity, {}, comment };
+	Product pr{ name, exp_date, Date::current_date(), manif_name, unit, quantity, {}, comment };
 	Place place = m_house.product_place(pr);
 
 	if (place.get_section() == 0)
@@ -92,7 +90,7 @@ void StorehouseEngine::clean()
 	m_house.clean();
 }
 
-void StorehouseEngine::log(const Date& date1, const Date& date2) const
+void StorehouseEngine::log(const Date & date1, const Date & date2) const
 {
 	if (m_status != Status::open)
 	{
@@ -111,8 +109,8 @@ void StorehouseEngine::remove()
 		return;
 	}
 
-	std::string name;
-	size_t quantity;
+	std::string name = "";
+	size_t quantity = 0;
 	std::cout << "> Product name you would like to remove: ";
 	std::getline(std::cin, name);
 	std::cout << "> Quantity: ";
@@ -120,6 +118,35 @@ void StorehouseEngine::remove()
 	std::cin.ignore();
 
 	m_house.remove_product(name, quantity);
+}
+
+void StorehouseEngine::loss() const
+{
+	if (m_status != Status::open)
+	{
+		std::cout << INVALID_ACTION_MSG;
+		return;
+	}
+
+	std::string name = "";
+	double price = 0;
+	std::string from = "";
+	std::string to = "";
+
+	std::cout << "Product name: ";
+	std::getline(std::cin, name);
+	std::cout << "Price per unit: ";
+	std::cin >> price;
+	std::cin.ignore();
+	std::cout << "Enter the wanted period.\n" << "From: ";
+	std::getline(std::cin, from);
+	std::cout << "To: ";
+	std::getline(std::cin, to);
+
+	Date date1 = { from };
+	Date date2 = { to };
+
+	m_house.loss(name, price, date1, date2);
 }
 
 void StorehouseEngine::load(std::istream & in)
@@ -187,11 +214,15 @@ void StorehouseEngine::execute_command(const std::string & command, const std::s
 			std::cout << "Invalid date format! Please, use 'YYYY-MM-DD' format.\n";
 		}
 	}
+	else if (command == "loss")
+	{
+		loss();
+	}
 }
 
 bool StorehouseEngine::is_valid_command(const std::string & command) const
 {
-	for (size_t i = 0; i < COUNT_COMMANDS; i++)
+	for (size_t i = 0; i < COUNT_COMMANDS; ++i)
 	{
 		if (command == VALID_COMMANDS[i])
 		{
@@ -202,7 +233,7 @@ bool StorehouseEngine::is_valid_command(const std::string & command) const
 	return false;
 }
 
-void StorehouseEngine::read_place(Place& place) const
+void StorehouseEngine::read_place(Place & place) const
 {
 	size_t section;
 	size_t shelf;
@@ -216,7 +247,7 @@ void StorehouseEngine::read_place(Place& place) const
 	std::cout << "> Number: ";
 	std::cin >> num;
 
-	while (section < 1 || section > COUNT_SECTIONS || shelf < 1 || shelf > COUNT_SHELVES || 
+	while (section < 1 || section > COUNT_SECTIONS || shelf < 1 || shelf > COUNT_SHELVES ||
 		num < 1 || num > SHELF_CAPACITY)
 	{
 		std::cout << "Invalid place!\nChoose where to place the product:\n";
