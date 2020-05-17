@@ -1,9 +1,10 @@
 #include <iostream>
 #include <cassert>
 #include <iomanip>
+
 #include "Date.h"
 
-Date::Date() : m_year{ 0 }, m_month{ 0 }, m_day{ 0 } {}
+Date::Date() = default;
 
 Date::Date(size_t year, size_t month, size_t day)
 {
@@ -17,9 +18,12 @@ Date::Date(const std::string& text_date)
 	std::vector<std::string> tokens;
 	split(text_date, tokens, '-');
 
-	set_year(num_parse(tokens[0]));
-	set_month(num_parse(tokens[1]));
-	set_day(num_parse(tokens[2]));
+	if (tokens.size() == 3)
+	{
+		set_year(num_parse(tokens[0]));
+		set_month(num_parse(tokens[1]));
+		set_day(num_parse(tokens[2]));
+	}
 }
 
 Date::Date(const Date& other)

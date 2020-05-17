@@ -1,11 +1,13 @@
 ﻿  Change.cpp
+  Date.cpp
+  Engine.cpp
+  Place.cpp
+C:\Users\USER\source\repos\Storehouse-Project\Start\Place.cpp(23,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   Product.cpp
-  Section.cpp
+C:\Users\USER\source\repos\Storehouse-Project\Start\Place.cpp(29,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  ProductInfo.cpp
   Start.cpp
-  Storehouse.cpp
-C:\Users\USER\source\repos\Storehouse-Project\Start\Product.cpp(253,12): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\USER\source\repos\Storehouse-Project\Start\Storehouse.cpp(75,29): warning C4244: '=': conversion from 'double' to 'size_t', possible loss of data
   StorehouseEngine.cpp
   Generating Code...
-C:\Users\USER\source\repos\Storehouse-Project\Start\Storehouse.cpp(322,12): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Start.vcxproj -> C:\Users\USER\source\repos\Storehouse-Project\x64\Debug\Start.exe
+C:\Users\USER\source\repos\Storehouse-Project\Start\Product.cpp(253,12): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\USER\source\repos\Storehouse-Project\Start\Start.cpp : fatal error C1090: PDB API call failed, error code '3': C:\Users\USER\source\repos\Storehouse-Project\Start\x64\Debug\vc142.pdb

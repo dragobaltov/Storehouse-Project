@@ -1,2 +1,12 @@
-﻿  Engine.cpp
+﻿  Change.cpp
+  Date.cpp
+  Place.cpp
+  Product.cpp
+  ProductInfo.cpp
+  Section.cpp
+  Start.cpp
+  Storehouse.cpp
+  StorehouseEngine.cpp
+  Generating Code...
+C:\Users\USER\source\repos\Storehouse\Start\Storehouse.cpp(75,29): warning C4244: '=': conversion from 'double' to 'size_t', possible loss of data
   Start.vcxproj -> C:\Users\USER\source\repos\Storehouse\Debug\Start.exe

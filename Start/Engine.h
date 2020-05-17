@@ -1,12 +1,5 @@
 #pragma once
-#include <iostream>
 #include <string>
-#include <vector>
-#include <stdlib.h>
-#include <chrono>
-#include <thread>
-#include <fstream>
-#include <utility>
 
 const std::string INVALID_ACTION_MSG = "Invalid action! There is no opened file.\n";
 

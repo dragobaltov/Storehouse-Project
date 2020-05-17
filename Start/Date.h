@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include <string>
 #pragma once
 
 void split(const std::string&, std::vector<std::string>&, char);
@@ -34,7 +35,7 @@ public:
 
 	static Date current_date();
 private:
-	size_t m_year;
-	size_t m_month;
-	size_t m_day;
+	size_t m_year{0};
+	size_t m_month{0};
+	size_t m_day{0};
 };
