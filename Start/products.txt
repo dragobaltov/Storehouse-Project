@@ -27,6 +27,20 @@ Manifacturer: Olio LTD
 Quantity: 12 kg
 Place in the storehouse: section 2, shelf 2, number 2
 Comment: gadno
+Name: babani
+Expiration Date: 2020-12-12
+Arrival Date: 2020-05-29
+Manifacturer: ok
+Quantity: 12 kg
+Place in the storehouse: section 2, shelf 1, number 9
+Comment: no
+Name: halva
+Expiration Date: 2020-02-02
+Arrival Date: 2020-05-29
+Manifacturer: ok
+Quantity: 6 kg
+Place in the storehouse: section 3, shelf 3, number 3
+Comment: no
 Name: svinski ushi
 Expiration Date: 2020-06-03
 Arrival Date: 2020-05-29
@@ -34,6 +48,13 @@ Manifacturer: svinq.com
 Quantity: 33 kg
 Place in the storehouse: section 4, shelf 6, number 5
 Comment: no
+Name: nipples
+Expiration Date: 2099-12-12
+Arrival Date: 2020-05-29
+Manifacturer: people
+Quantity: 18 kg
+Place in the storehouse: section 4, shelf 5, number 3
+Comment: yes
 Changes:
 added 13 kg of halva at section 1, shelf 5, number 5 2020-05-29
 added 33 kg of svinski ushi at section 4, shelf 6, number 5 2020-05-29
@@ -58,3 +79,7 @@ cleaned 2 kg of try at section 5, shelf 5, number 5 2020-05-29
 added 200 kg of hlqb at section 3, shelf 4, number 4 2020-05-29
 removed 29 kg of hlqb at section 3, shelf 4, number 4 2020-05-29
 removed 171 kg of hlqb at section 3, shelf 4, number 4 2020-05-29
+added 18 kg of nipples at section 4, shelf 5, number 3 2020-05-29
+added 12 kg of babani at section 2, shelf 1, number 9 2020-05-29
+added 3 kg of halva at section 3, shelf 3, number 3 2020-05-29
+added 3 kg of halva at section 3, shelf 3, number 3 2020-05-29

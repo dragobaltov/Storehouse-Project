@@ -23,12 +23,12 @@ void StorehouseEngine::print() const
 
 void StorehouseEngine::add()
 {
-	std::string name;
-	std::string exp_date;
-	std::string manif_name;
-	std::string unit;
-	size_t quantity;
-	std::string comment;
+	std::string name = "";
+	std::string exp_date = "";
+	std::string manif_name = "";
+	std::string unit = "";
+	size_t quantity = 0;
+	std::string comment = "";
 
 	std::cout << "Enter product information:\n";
 	std::cout << "> Name: ";
@@ -37,9 +37,7 @@ void StorehouseEngine::add()
 	std::cout << "> Manifacturer: ";
 	std::getline(std::cin, manif_name);
 	read_unit(unit, "> Unit: ");
-	std::cout << "> Quantity: ";
-	std::cin >> quantity;
-	std::cin.ignore(); // ----------------------- //
+	quantity = read_quantity("> Quantity: ");
 	std::cout << "> Comment: ";
 	std::getline(std::cin, comment);
 
@@ -79,12 +77,9 @@ void StorehouseEngine::log(const Date & date1, const Date & date2) const
 void StorehouseEngine::remove()
 {
 	std::string name = "";
-	size_t quantity = 0;
 	std::cout << "> Product name you would like to remove: ";
 	std::getline(std::cin, name);
-	std::cout << "> Quantity: ";
-	std::cin >> quantity;
-	std::cin.ignore();
+	size_t quantity = read_quantity("> Quantity: ");
 
 	m_house.remove_product(name, quantity);
 }
@@ -223,9 +218,9 @@ bool StorehouseEngine::is_valid_command(const std::string & command) const
 
 void StorehouseEngine::read_place(Place & place) const
 {
-	size_t section;
-	size_t shelf;
-	size_t num;
+	size_t section = 0;
+	size_t shelf = 0;
+	size_t num = 0;
 
 	std::cout << "Choose where to place the product:\n";
 	std::cout << "> Section: ";
@@ -234,6 +229,8 @@ void StorehouseEngine::read_place(Place & place) const
 	std::cin >> shelf;
 	std::cout << "> Number: ";
 	std::cin >> num;
+	std::cin.clear();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 	while (section < 1 || section > COUNT_SECTIONS || shelf < 1 || shelf > COUNT_SHELVES ||
 		num < 1 || num > SHELF_CAPACITY)
@@ -245,8 +242,9 @@ void StorehouseEngine::read_place(Place & place) const
 		std::cin >> shelf;
 		std::cout << "> Number: ";
 		std::cin >> num;
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
-	std::cin.ignore(); // ----------------------------- //
 
 	place = { section, shelf, num };
 }
@@ -273,4 +271,24 @@ void StorehouseEngine::read_unit(std::string& unit, const std::string& prefix_ms
 		std::cout << "Inavlid unit! Supported units are kg and l\n" << prefix_msg;
 		std::getline(std::cin, unit);
 	}
+}
+
+size_t StorehouseEngine::read_quantity(const std::string& prefix_msg) const
+{
+	size_t quantity = 0;
+
+	std::cout << prefix_msg;
+	std::cin >> quantity;
+	std::cin.clear();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+	while (!quantity)
+	{
+		std::cout << "Quantity cannot be 0!\n" << prefix_msg;
+		std::cin >> quantity;
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
+
+	return quantity;
 }

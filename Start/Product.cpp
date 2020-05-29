@@ -68,7 +68,6 @@ void Product::set_unit(const std::string& unit)
 
 void Product::set_quantity(size_t quantity)
 {
-	assert(quantity);
 	m_quantity = quantity;
 }
 

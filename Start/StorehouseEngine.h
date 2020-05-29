@@ -34,4 +34,5 @@ private:
 	void read_place(Place&) const;
 	void read_date(std::string&, const std::string&) const;
 	void read_unit(std::string&, const std::string&) const;
+	size_t read_quantity(const std::string&) const;
 };

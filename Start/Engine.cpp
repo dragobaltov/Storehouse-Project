@@ -22,6 +22,12 @@ void Engine::run()
 
 void Engine::open(const std::string & file_name)
 {
+	if (m_status == Status::open)
+	{
+		std::cout << "File " << m_current_file << " is already opened!\n";
+		return;
+	}
+
 	std::fstream file;
 	file.open(file_name, std::ios::in);
 
