@@ -104,6 +104,11 @@ size_t Section::get_count_products() const
 	return m_products.size();
 }
 
+void Section::unload()
+{
+	m_products.clear();
+}
+
 std::ostream& operator<<(std::ostream& out, const Section& section)
 {
 	size_t size = section.get_count_products();

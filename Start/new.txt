@@ -1,0 +1,19 @@
+Products:
+Name: halva
+Expiration Date: 2021-12-12
+Arrival Date: 2020-05-29
+Manifacturer: bestini
+Quantity: 46 kg
+Place in the storehouse: section 1, shelf 5, number 5
+Comment: 
+Name: svinski ushi
+Expiration Date: 2020-06-03
+Arrival Date: 2020-05-29
+Manifacturer: svinq.com
+Quantity: 33 kg
+Place in the storehouse: section 4, shelf 6, number 5
+Comment: no
+Changes:
+added 13 kg of halva at section 1, shelf 5, number 5 2020-05-29
+added 33 kg of svinski ushi at section 4, shelf 6, number 5 2020-05-29
+added 33 kg of halva at section 1, shelf 5, number 5 2020-05-29

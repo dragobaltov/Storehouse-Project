@@ -1,8 +1,7 @@
 #pragma once
 #include "Date.h"
 #include "ProductInfo.h"
-#include <string>
-#include <vector>
+
 
 enum class ChangeType
 {
@@ -17,6 +16,9 @@ class Change
 public:
 	Change();
 	Change(ChangeType, const ProductInfo&, const Date&);
+	Change(const Change&);
+	~Change();
+	Change& operator=(const Change&);
 	void print(std::ostream&) const;
 	const Date& get_date() const;
 	const ChangeType get_type() const;

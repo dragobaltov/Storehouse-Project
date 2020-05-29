@@ -1,4 +1,11 @@
 Products:
+Name: halva
+Expiration Date: 2021-12-12
+Arrival Date: 2020-05-29
+Manifacturer: bestini
+Quantity: 13 kg
+Place in the storehouse: section 1, shelf 5, number 5
+Comment: 
 Name: banani
 Expiration Date: 2020-06-12
 Arrival Date: 2020-05-10
@@ -13,14 +20,23 @@ Manifacturer: Horeisho
 Quantity: 12 kg
 Place in the storehouse: section 1, shelf 1, number 1
 Comment: best
-Name: bananni na kolko
-Expiration Date: 2002-12-12
-Arrival Date: 2020-05-13
-Manifacturer: kolio
-Quantity: 2 kg
-Place in the storehouse: section 3, shelf 3, number 3
-Comment: adel
+Name: olio
+Expiration Date: 2020-12-12
+Arrival Date: 2020-05-29
+Manifacturer: Olio LTD
+Quantity: 12 kg
+Place in the storehouse: section 2, shelf 2, number 2
+Comment: gadno
+Name: svinski ushi
+Expiration Date: 2020-06-03
+Arrival Date: 2020-05-29
+Manifacturer: svinq.com
+Quantity: 33 kg
+Place in the storehouse: section 4, shelf 6, number 5
+Comment: no
 Changes:
+added 13 kg of halva at section 1, shelf 5, number 5 2020-05-29
+added 33 kg of svinski ushi at section 4, shelf 6, number 5 2020-05-29
 added 12 kg of banani at section 1, shelf 1, number 1 2020-05-12
 added 12 kg of hot dog at section 5, shelf 4, number 5 2020-05-12
 added 10 kg of new hot dog at section 5, shelf 4, number 3 2020-05-12
@@ -33,3 +49,12 @@ added 10 kg of new hot dog at section 5, shelf 4, number 3 2020-05-12
 cleaned 12 kg of hot dog at section 5, shelf 4, number 5 2020-05-12
 cleaned 10 kg of new hot dog at section 5, shelf 4, number 3 2020-05-12
 removed 4 kg of banani at section 1, shelf 1, number 1 2020-05-13
+added 12 kg of olio at section 2, shelf 2, number 2 2020-05-29
+added 19 l of Katran at section 8, shelf 8, number 8 2020-05-29
+cleaned 2 kg of bananni na kolko at section 3, shelf 3, number 3 2020-05-29
+cleaned 19 l of Katran at section 8, shelf 8, number 8 2020-05-29
+added 2 kg of try at section 5, shelf 5, number 5 2020-05-29
+cleaned 2 kg of try at section 5, shelf 5, number 5 2020-05-29
+added 200 kg of hlqb at section 3, shelf 4, number 4 2020-05-29
+removed 29 kg of hlqb at section 3, shelf 4, number 4 2020-05-29
+removed 171 kg of hlqb at section 3, shelf 4, number 4 2020-05-29

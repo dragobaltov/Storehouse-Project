@@ -27,6 +27,7 @@ public:
 
 	bool place_is_free(const Place&) const;
 	size_t get_count_products() const;
+	void unload();
 private:
 	std::vector<Product> m_products{};
 	size_t m_num{ 0 };

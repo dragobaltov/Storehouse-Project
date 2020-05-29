@@ -1,9 +1,28 @@
 #include "Change.h"
+#include <string>
+#include <vector>
 
 Change::Change() = default;
 
 Change::Change(ChangeType type, const ProductInfo& product_info, const Date& date) :
 	m_type{ type }, m_product_info{ product_info }, m_date{ date } {}
+
+Change::Change(const Change& other) : 
+	m_type{ other.m_type }, m_product_info{ other.m_product_info }, m_date{ other.m_date } {}
+
+Change::~Change() = default;
+ 
+Change& Change::operator=(const Change& other)
+{
+	if (this != &other)
+	{
+		m_type = other.m_type;
+		m_product_info = other.m_product_info;
+		m_date = other.m_date;
+	}
+
+	return *this;
+}
 
 void Change::print(std::ostream& out) const
 {

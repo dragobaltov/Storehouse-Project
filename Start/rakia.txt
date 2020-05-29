@@ -1,0 +1,18 @@
+Products:
+Name: halva
+Expiration Date: 2021-12-12
+Arrival Date: 2020-05-29
+Manifacturer: bestini
+Quantity: 13 kg
+Place in the storehouse: section 1, shelf 5, number 5
+Comment: 
+Name: rakia
+Expiration Date: 3000-12-12
+Arrival Date: 2020-05-29
+Manifacturer: selo
+Quantity: 100 kilograms
+Place in the storehouse: section 4, shelf 7, number 1
+Comment: slivova
+Changes:
+added 13 kg of halva at section 1, shelf 5, number 5 2020-05-29
+added 100 kilograms of rakia at section 4, shelf 7, number 1 2020-05-29

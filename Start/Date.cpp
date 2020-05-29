@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cassert>
 #include <iomanip>
-
+#include <ctime>
 #include "Date.h"
 
 Date::Date() = default;
@@ -13,27 +13,24 @@ Date::Date(size_t year, size_t month, size_t day)
 	set_day(day);
 }
 
-Date::Date(const std::string& text_date)
+Date::Date(const std::string & text_date)
 {
 	std::vector<std::string> tokens;
 	split(text_date, tokens, '-');
 
-	if (tokens.size() == 3)
-	{
-		set_year(num_parse(tokens[0]));
-		set_month(num_parse(tokens[1]));
-		set_day(num_parse(tokens[2]));
-	}
+	set_year(num_parse(tokens[0]));
+	set_month(num_parse(tokens[1]));
+	set_day(num_parse(tokens[2]));
 }
 
-Date::Date(const Date& other)
+Date::Date(const Date & other)
 {
 	set_year(other.m_year);
 	set_month(other.m_month);
 	set_day(other.m_day);
 }
 
-Date& Date::operator=(const Date& other)
+Date& Date::operator=(const Date & other)
 {
 	set_year(other.m_year);
 	set_month(other.m_month);
@@ -44,17 +41,17 @@ Date& Date::operator=(const Date& other)
 
 Date::~Date() = default;
 
-bool Date::operator==(const Date& other) const
+bool Date::operator==(const Date & other) const
 {
 	return m_year == other.m_year && m_month == other.m_month && m_day == other.m_day;
 }
 
-bool Date::operator!=(const Date& other) const
+bool Date::operator!=(const Date & other) const
 {
 	return !(*this == other);
 }
 
-bool Date::operator<(const Date& other) const
+bool Date::operator<(const Date & other) const
 {
 	if (m_year < other.m_year)
 	{
@@ -82,17 +79,17 @@ bool Date::operator<(const Date& other) const
 	return false;
 }
 
-bool Date::operator>(const Date& other) const
+bool Date::operator>(const Date & other) const
 {
 	return !(*this < other) && !(*this == other);
 }
 
-bool Date::operator<=(const Date& other) const
+bool Date::operator<=(const Date & other) const
 {
 	return !(*this > other);
 }
 
-bool Date::operator>=(const Date& other) const
+bool Date::operator>=(const Date & other) const
 {
 	return !(*this < other);
 }
@@ -174,13 +171,13 @@ Date Date::current_date()
 	time_t t = time(0);
 	struct tm* now = localtime(&t);
 
-	return { static_cast<size_t>(now->tm_year + 1900), static_cast<size_t>(now->tm_mon + 1), 
+	return { static_cast<size_t>(now->tm_year) + 1900, static_cast<size_t>(now->tm_mon) + 1,
 		static_cast<size_t>(now->tm_mday) };
 }
 
 std::ostream& operator<<(std::ostream& out, const Date& date)
 {
-	out << date.m_year << '-' << std::setw(2) << std::setfill('0') << date.m_month 
+	out << date.m_year << '-' << std::setw(2) << std::setfill('0') << date.m_month
 		<< '-' << std::setw(2) << std::setfill('0') << date.m_day;
 	return out;
 }

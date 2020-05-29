@@ -198,6 +198,16 @@ void Storehouse::print_products(std::ostream& out) const
 	}
 }
 
+void Storehouse::unload()
+{
+	for (Section& s : m_sections)
+	{
+		s.unload();
+	}
+
+	m_changes.clear();
+}
+
 std::ostream& operator<<(std::ostream& out, const Storehouse& storehouse)
 {
 	out << "Products:\n";
@@ -255,12 +265,12 @@ std::istream& operator>>(std::istream& in, Storehouse& storehouse)
 char Storehouse::get_answer(const std::string& question) const
 {
 	std::string ans;
-	std::cout << question << "< ";
+	std::cout << question << "> ";
 	std::getline(std::cin, ans);
 
 	while (ans[0] != 'Y' && ans[0] != 'y' && ans[0] != 'N' && ans[0] != 'n')
 	{
-		std::cout << "Invalid answer! Please, answer with Yes(Y) or No(N).\n" << "< ";
+		std::cout << "Invalid answer! Please, answer with Yes(Y) or No(N).\n" << "> ";
 		std::getline(std::cin, ans);
 	}
 

@@ -63,7 +63,6 @@ void Product::set_manifacturer_name(const std::string& manifacturer_name)
 
 void Product::set_unit(const std::string& unit)
 {
-	assert(is_in_units(unit));
 	m_unit = unit;
 }
 

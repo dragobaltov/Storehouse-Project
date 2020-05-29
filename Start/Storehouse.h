@@ -2,9 +2,7 @@
 #include "Section.h"
 #include "Product.h"
 #include "Change.h"
-#include <utility>
 #include <iostream>
-#include <fstream>
 #include <string>
 #include <vector>
 
@@ -26,6 +24,7 @@ public:
 	bool place_is_free(const Place&) const;
 
 	void print_products(std::ostream&) const;
+	void unload();
 private:
 	std::vector<Section> m_sections{};
 	std::vector<Change> m_changes{};

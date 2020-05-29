@@ -1,5 +1,6 @@
 #include "StorehouseEngine.h"
 #include <fstream>
+#include <regex>
 
 StorehouseEngine::StorehouseEngine() = default;
 
@@ -17,23 +18,11 @@ void StorehouseEngine::help() const
 
 void StorehouseEngine::print() const
 {
-	if (m_status != Status::open)
-	{
-		std::cout << INVALID_ACTION_MSG;
-		return;
-	}
-
 	m_house.print_products(std::cout);
 }
 
 void StorehouseEngine::add()
 {
-	if (m_status != Status::open)
-	{
-		std::cout << INVALID_ACTION_MSG;
-		return;
-	}
-
 	std::string name;
 	std::string exp_date;
 	std::string manif_name;
@@ -44,12 +33,10 @@ void StorehouseEngine::add()
 	std::cout << "Enter product information:\n";
 	std::cout << "> Name: ";
 	std::getline(std::cin, name);
-	std::cout << "> Expiration date(yyyy-mm-dd): ";
-	std::getline(std::cin, exp_date);
+	read_date(exp_date, "> Expiration date(yyyy-mm-dd): ");
 	std::cout << "> Manifacturer: ";
 	std::getline(std::cin, manif_name);
-	std::cout << "> Unit: ";
-	std::getline(std::cin, unit);
+	read_unit(unit, "> Unit: ");
 	std::cout << "> Quantity: ";
 	std::cin >> quantity;
 	std::cin.ignore(); // ----------------------- //
@@ -81,34 +68,16 @@ void StorehouseEngine::add()
 
 void StorehouseEngine::clean()
 {
-	if (m_status != Status::open)
-	{
-		std::cout << INVALID_ACTION_MSG;
-		return;
-	}
-
 	m_house.clean();
 }
 
 void StorehouseEngine::log(const Date & date1, const Date & date2) const
 {
-	if (m_status != Status::open)
-	{
-		std::cout << INVALID_ACTION_MSG;
-		return;
-	}
-
 	m_house.log(date1, date2);
 }
 
 void StorehouseEngine::remove()
 {
-	if (m_status != Status::open)
-	{
-		std::cout << INVALID_ACTION_MSG;
-		return;
-	}
-
 	std::string name = "";
 	size_t quantity = 0;
 	std::cout << "> Product name you would like to remove: ";
@@ -122,12 +91,6 @@ void StorehouseEngine::remove()
 
 void StorehouseEngine::loss() const
 {
-	if (m_status != Status::open)
-	{
-		std::cout << INVALID_ACTION_MSG;
-		return;
-	}
-
 	std::string name = "";
 	double price = 0;
 	std::string from = "";
@@ -138,10 +101,9 @@ void StorehouseEngine::loss() const
 	std::cout << "Price per unit: ";
 	std::cin >> price;
 	std::cin.ignore();
-	std::cout << "Enter the wanted period.\n" << "From: ";
-	std::getline(std::cin, from);
-	std::cout << "To: ";
-	std::getline(std::cin, to);
+	std::cout << "Enter the wanted period.\n";
+	read_date(from, "From: ");
+	read_date(to, "To: ");
 
 	Date date1 = { from };
 	Date date2 = { to };
@@ -154,6 +116,11 @@ void StorehouseEngine::load(std::istream & in)
 	in >> m_house;
 }
 
+void StorehouseEngine::unload()
+{
+	m_house.unload();
+}
+
 void StorehouseEngine::save_data(std::ostream & out) const
 {
 	out << m_house;
@@ -163,61 +130,82 @@ void StorehouseEngine::execute_command(const std::string & command, const std::s
 {
 	if (command == "open")
 	{
+		if (additional == "")
+		{
+			std::cout << INVALID_FILE_NAME_MSG;
+			return;
+		}
 		open(additional);
-	}
-	else if (command == "save")
-	{
-		save_as(m_current_file);
-	}
-	else if (command == "saveas")
-	{
-		save_as(additional);
 	}
 	else if (command == "help")
 	{
 		help();
 	}
-	else if (command == "close")
-	{
-		close();
-	}
 	else if (command == "exit")
 	{
 		exit();
 	}
-	else if (command == "add")
+	else
 	{
-		add();
-	}
-	else if (command == "remove")
-	{
-		remove();
-	}
-	else if (command == "print")
-	{
-		print();
-	}
-	else if (command == "clean")
-	{
-		clean();
-	}
-	else if (command == "log")
-	{
-		std::pair<std::string, std::string> dates = split_in_two(additional, ' ');
+		if (m_status != Status::open)
+		{
+			std::cout << INVALID_ACTION_MSG;
+			return;
+		}
 
-		if (std::regex_match(dates.first, DATE_FORMAT) && std::regex_match(dates.second, DATE_FORMAT))
+		if (command == "save")
 		{
-			log({ dates.first }, { dates.second });
+			save_as(m_current_file);
 		}
-		else
+		else if (command == "saveas")
 		{
-			std::cout << "Invalid date format! Please, use 'YYYY-MM-DD' format.\n";
+			if (additional == "")
+			{
+				std::cout << INVALID_FILE_NAME_MSG;
+				return;
+			}
+
+			save_as(additional);
+		}
+		else if (command == "close")
+		{
+			close();
+		}
+		else if (command == "add")
+		{
+			add();
+		}
+		else if (command == "remove")
+		{
+			remove();
+		}
+		else if (command == "print")
+		{
+			print();
+		}
+		else if (command == "clean")
+		{
+			clean();
+		}
+		else if (command == "log")
+		{
+			std::pair<std::string, std::string> dates = split_in_two(additional, ' ');
+
+			if (std::regex_match(dates.first, DATE_FORMAT) && std::regex_match(dates.second, DATE_FORMAT))
+			{
+				log({ dates.first }, { dates.second });
+			}
+			else
+			{
+				std::cout << "Invalid date format! Please, use 'YYYY-MM-DD' format.\n";
+			}
+		}
+		else if (command == "loss")
+		{
+			loss();
 		}
 	}
-	else if (command == "loss")
-	{
-		loss();
-	}
+	
 }
 
 bool StorehouseEngine::is_valid_command(const std::string & command) const
@@ -261,4 +249,28 @@ void StorehouseEngine::read_place(Place & place) const
 	std::cin.ignore(); // ----------------------------- //
 
 	place = { section, shelf, num };
+}
+
+void StorehouseEngine::read_date(std::string& str_date, const std::string& prefix_msg) const
+{
+	std::cout << prefix_msg;
+	std::getline(std::cin, str_date);
+
+	while (!std::regex_match(str_date, DATE_FORMAT))
+	{
+		std::cout << "Invalid date! Please try again:\n" << prefix_msg;
+		std::getline(std::cin, str_date);
+	}
+}
+
+void StorehouseEngine::read_unit(std::string& unit, const std::string& prefix_msg) const
+{
+	std::cout << prefix_msg;
+	std::getline(std::cin, unit);
+
+	while (!is_in_units(unit))
+	{
+		std::cout << "Inavlid unit! Supported units are kg and l\n" << prefix_msg;
+		std::getline(std::cin, unit);
+	}
 }

@@ -37,16 +37,12 @@ void Engine::open(const std::string & file_name)
 
 	m_status = Status::open;
 	m_current_file = file_name;
+
+	std::cout << "Successfully opened " << m_current_file << '\n';
 }
 
 void Engine::save_as(const std::string & file_name) const
 {
-	if (m_status != Status::open)
-	{
-		std::cout << INVALID_ACTION_MSG;
-		return;
-	}
-
 	std::ofstream out;
 	out.open(file_name, std::ios::out);
 
@@ -57,17 +53,15 @@ void Engine::save_as(const std::string & file_name) const
 	}
 
 	save_data(out);
+
+	std::cout << "Successfully saved changes in " << file_name << '\n';
 }
 
 void Engine::close()
 {
-	if (m_status != Status::open)
-	{
-		std::cout << "There is no opened file!\n";
-		return;
-	}
-
 	m_status = Status::closed;
+	unload();
+	std::cout << "Successfully closed " << m_current_file << '\n';
 }
 
 void Engine::exit()

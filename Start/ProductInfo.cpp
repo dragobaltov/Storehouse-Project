@@ -1,4 +1,6 @@
 #include "ProductInfo.h"
+#include <iostream>
+#include <regex>
 
 ProductInfo::ProductInfo() = default;
 
