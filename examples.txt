@@ -1,0 +1,84 @@
+Test1:
+open NewStore.txt
+add
+banani
+2020-12-12
+Kolio
+kg
+18
+no comment
+okay
+12
+10
+1
+1
+9
+8
+InvalidCommandTry
+add
+kashu
+2000-12-12
+bademi.com
+kg
+190
+qko kashu
+1
+9
+8
+1
+9
+9
+remove
+banani
+19
+on
+yes please
+clean
+loss
+kashu
+12,05
+2002-1
+2020-1-1
+2020-12-12
+print
+save
+save as copy.txt
+saveas copy.txt
+close
+help
+exit
+
+Test2:
+save
+add
+close
+open store1.txt
+add
+banani
+1000-05-06
+2020-05-23
+Kolio Banana
+kilometers
+kilograms
+101
+comenatr
+1
+1
+0
+1
+1
+1
+print
+remove
+banici
+12
+remove
+banani
+21
+print
+clean
+log 2020-01-01 2021-01-01
+save
+exit
+
+
