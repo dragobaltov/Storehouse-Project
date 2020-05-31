@@ -106,6 +106,8 @@ void Date::set_month(size_t month)
 	m_month = month;
 }
 
+/*! Checks whether or not the given day is correct to the month and the year.
+ * First, checks if the year is leap. Then, it gets the count of days in the given month.*/
 void Date::set_day(size_t day)
 {
 	bool is_leap_year = false;
@@ -175,6 +177,7 @@ Date Date::current_date()
 		static_cast<size_t>(now->tm_mday) };
 }
 
+/*! Prints the date with a leading zero in front of the day and the month if needed.*/
 std::ostream& operator<<(std::ostream& out, const Date& date)
 {
 	out << date.m_year << '-' << std::setw(2) << std::setfill('0') << date.m_month

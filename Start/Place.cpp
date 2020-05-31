@@ -8,6 +8,7 @@ Place::Place(size_t section, size_t shelf, size_t num)
 	change(section, shelf, num);
 }
 
+/*! Parses string to Place.*/
 Place::Place(const std::string& text_place)
 {
 	// section #, shelf #, number #
@@ -54,6 +55,7 @@ Place& Place::operator=(const Place& other)
 	return *this;
 }
 
+/*! Compares section, shelf and cell number.*/
 bool Place::operator==(const Place& other) const
 {
 	return m_section == other.m_section && m_shelf == other.m_shelf && m_num == other.m_num;
@@ -68,19 +70,16 @@ void Place::change(size_t section, size_t shelf, size_t num)
 
 void Place::set_section(size_t section)
 {
-	//validation...
 	m_section = section;
 }
 
 void Place::set_shelf(size_t shelf)
 {
-	//validation
 	m_shelf = shelf;
 }
 
 void Place::set_num(size_t num)
 {
-	//validation
 	m_num = num;
 }
 
@@ -99,6 +98,7 @@ size_t Place::get_num() const
 	return m_num;
 }
 
+/*! Returns a string in the format "section {#section}, shelf {#shelf}, number {#cell}"*/
 std::string Place::get_string_representation() const
 {
 	return "section " +  std::to_string(m_section) + ", shelf " + std::to_string(m_shelf)

@@ -1,0 +1,126 @@
+\hypertarget{class_date}{}\doxysection{Date Class Reference}
+\label{class_date}\index{Date@{Date}}
+
+
+The class represents dates in format I\+SO 8601(Y\+Y\+Y\+Y-\/\+M\+M-\/\+DD).  
+
+
+
+
+{\ttfamily \#include $<$Date.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_date_a92e4a33c08e309303036ed376fa58ae7}\label{class_date_a92e4a33c08e309303036ed376fa58ae7}} 
+{\bfseries Date} (size\+\_\+t, size\+\_\+t, size\+\_\+t)
+\item 
+\mbox{\hyperlink{class_date_aab4cb9b61d7810de427e55b297689297}{Date}} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_date_afa65693475fb86a2de04c8578b232201}\label{class_date_afa65693475fb86a2de04c8578b232201}} 
+{\bfseries Date} (const \mbox{\hyperlink{class_date}{Date}} \&)
+\item 
+\mbox{\Hypertarget{class_date_a4ff2c379758f144302fee02f1bb8b50c}\label{class_date_a4ff2c379758f144302fee02f1bb8b50c}} 
+\mbox{\hyperlink{class_date}{Date}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_date}{Date}} \&)
+\item 
+\mbox{\Hypertarget{class_date_adc8cb1d772026f17bf72adb6a0d0d66f}\label{class_date_adc8cb1d772026f17bf72adb6a0d0d66f}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_date}{Date}} \&) const
+\item 
+\mbox{\Hypertarget{class_date_ac71826285546d63dd6bb124f9d72971f}\label{class_date_ac71826285546d63dd6bb124f9d72971f}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{class_date}{Date}} \&) const
+\item 
+\mbox{\Hypertarget{class_date_a08c0538091d061550b90787d9313ca61}\label{class_date_a08c0538091d061550b90787d9313ca61}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_date}{Date}} \&) const
+\item 
+\mbox{\Hypertarget{class_date_aa15bd227fc1cde98e517c2dc74f7d54f}\label{class_date_aa15bd227fc1cde98e517c2dc74f7d54f}} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{class_date}{Date}} \&) const
+\item 
+\mbox{\Hypertarget{class_date_ae20446db8390fe22e2f98a373cc0393a}\label{class_date_ae20446db8390fe22e2f98a373cc0393a}} 
+bool {\bfseries operator$<$=} (const \mbox{\hyperlink{class_date}{Date}} \&) const
+\item 
+\mbox{\Hypertarget{class_date_ac98d2c623c2a1184abccfc9b6d83c037}\label{class_date_ac98d2c623c2a1184abccfc9b6d83c037}} 
+bool {\bfseries operator$>$=} (const \mbox{\hyperlink{class_date}{Date}} \&) const
+\item 
+\mbox{\Hypertarget{class_date_ab6cdc4fb99cb559c13a3256a1e8e4470}\label{class_date_ab6cdc4fb99cb559c13a3256a1e8e4470}} 
+void {\bfseries set\+\_\+year} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_date_a1ad6d92cbdceef3d903adf0888122e88}\label{class_date_a1ad6d92cbdceef3d903adf0888122e88}} 
+void {\bfseries set\+\_\+month} (size\+\_\+t)
+\item 
+void \mbox{\hyperlink{class_date_a00a498253932488cb4edf3397db01ddc}{set\+\_\+day}} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_date_a69d7660af9ee546bd062176a14efa801}\label{class_date_a69d7660af9ee546bd062176a14efa801}} 
+size\+\_\+t {\bfseries get\+\_\+year} () const
+\item 
+\mbox{\Hypertarget{class_date_aa8cf4cd20a0f711104c2dc6eb1df44be}\label{class_date_aa8cf4cd20a0f711104c2dc6eb1df44be}} 
+size\+\_\+t {\bfseries get\+\_\+month} () const
+\item 
+\mbox{\Hypertarget{class_date_aea5500f6b70b4f0e3f69f4cc61a7dce9}\label{class_date_aea5500f6b70b4f0e3f69f4cc61a7dce9}} 
+size\+\_\+t {\bfseries get\+\_\+day} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_date_a872c95aabfec730ff41dd4a57538771d}{current\+\_\+date}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_date_a05f992cbd7f4f32e15b42ee66392b539}\label{class_date_a05f992cbd7f4f32e15b42ee66392b539}} 
+size\+\_\+t {\bfseries m\+\_\+year} \{0\}
+\item 
+\mbox{\Hypertarget{class_date_a1928a2389f15e91648dc07576af23f9e}\label{class_date_a1928a2389f15e91648dc07576af23f9e}} 
+size\+\_\+t {\bfseries m\+\_\+month} \{0\}
+\item 
+\mbox{\Hypertarget{class_date_ae38bc5a80ff5e8aa35cad975eee8dc14}\label{class_date_ae38bc5a80ff5e8aa35cad975eee8dc14}} 
+size\+\_\+t {\bfseries m\+\_\+day} \{0\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_date_a191ee8989894d19ac4c9a71e359210a1}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_date}{Date}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class represents dates in format I\+SO 8601(Y\+Y\+Y\+Y-\/\+M\+M-\/\+DD). 
+
+It keeps year, month and day as fields. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_date_aab4cb9b61d7810de427e55b297689297}\label{class_date_aab4cb9b61d7810de427e55b297689297}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{Date()}{Date()}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text\+\_\+date }\end{DoxyParamCaption})}
+
+The constructor enables direct parsing from string to date. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_date_a872c95aabfec730ff41dd4a57538771d}\label{class_date_a872c95aabfec730ff41dd4a57538771d}} 
+\index{Date@{Date}!current\_date@{current\_date}}
+\index{current\_date@{current\_date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{current\_date()}{current\_date()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Date\+::current\+\_\+date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the current date \mbox{\Hypertarget{class_date_a00a498253932488cb4edf3397db01ddc}\label{class_date_a00a498253932488cb4edf3397db01ddc}} 
+\index{Date@{Date}!set\_day@{set\_day}}
+\index{set\_day@{set\_day}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{set\_day()}{set\_day()}}
+{\footnotesize\ttfamily void Date\+::set\+\_\+day (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{day }\end{DoxyParamCaption})}
+
+Checks whether or not the given day is correct to the month and the year. First, checks if the year is leap. Then, it gets the count of days in the given month. 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_date_a191ee8989894d19ac4c9a71e359210a1}\label{class_date_a191ee8989894d19ac4c9a71e359210a1}} 
+\index{Date@{Date}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Prints the date with a leading zero in front of the day and the month if needed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Start/Date.\+h\item 
+Start/Date.\+cpp\end{DoxyCompactItemize}

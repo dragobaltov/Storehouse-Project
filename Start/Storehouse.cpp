@@ -1,5 +1,6 @@
 #include "Storehouse.h"
 
+/*! Initializes all sections in the storehouse with default values.*/
 Storehouse::Storehouse()
 {
 	for (size_t i = 1; i <= COUNT_SECTIONS; ++i)
@@ -8,6 +9,7 @@ Storehouse::Storehouse()
 	}
 }
 
+/*! Invokes Section::add(). Then, adds the new change.*/
 void Storehouse::add_product(const Product& product)
 {
 	m_sections[product.get_place().get_section() - 1].add(product);
@@ -17,6 +19,7 @@ void Storehouse::add_product(const Product& product)
 	std::cout << ch;
 }
 
+/*! Increases the quantity of a product that is already in the storehouse.*/
 void Storehouse::increase_quantity_of(const Product& product)
 {
 	size_t section = product.get_place().get_section();
@@ -28,6 +31,12 @@ void Storehouse::increase_quantity_of(const Product& product)
 	std::cout << ch;
 }
 
+/*! Gets all products in the storehouse with the same name and sorts them ascending by their expiration date.
+ * If the total quantity of all products is less than the given, 
+ * the user is given a choice whether or not to remove all of them.
+ * If the total quantity is more than or equal to the given,
+ * the products with oldest expiration date are removed.
+ * Finnaly, adds the new changes.*/
 void Storehouse::remove_product(const std::string& name, size_t quantity)
 {
 	std::vector<Product> products;
@@ -87,6 +96,7 @@ void Storehouse::remove_product(const std::string& name, size_t quantity)
 	}
 }
 
+/*! Removes all products, which date is less than or equal to the current date, and adds the new changes.*/
 void Storehouse::clean()
 {
 	Date curr_date = Date::current_date();
@@ -117,6 +127,7 @@ void Storehouse::clean()
 	}
 }
 
+/*! Prints all changes made in the given period.*/
 void Storehouse::log(const Date& date1, const Date& date2) const
 {
 	if (date1 > date2)
@@ -137,6 +148,7 @@ void Storehouse::log(const Date& date1, const Date& date2) const
 	}
 }
 
+/*! Calculates the loss from all cleaned products with the same name by a given price.*/
 void Storehouse::loss(const std::string& name, double price, const Date& date1, const Date& date2) const
 {
 	double loss = 0;
@@ -161,11 +173,13 @@ void Storehouse::loss(const std::string& name, double price, const Date& date1, 
 	std::cout << "Loss: " << loss << '\n';
 }
 
+/*! Checks if the place is free.*/
 bool Storehouse::place_is_free(const Place& place) const
 {
 	return m_sections[place.get_section() - 1].place_is_free(place);
 }
 
+/*! Prints all products in the store as those with same names are considered as one.*/
 void Storehouse::print_products(std::ostream& out) const
 {
 	std::vector<std::string> names{};
@@ -198,6 +212,7 @@ void Storehouse::print_products(std::ostream& out) const
 	}
 }
 
+/*! Removes the products from every section.*/
 void Storehouse::unload()
 {
 	for (Section& s : m_sections)
@@ -305,6 +320,8 @@ size_t Storehouse::get_total_quantity(const std::vector<Product>& products) cons
 	return total;
 }
 
+/*! Checks if the given product is already in the store.
+ * If yes, it returns its place. If not, returns empty place object*/
 Place Storehouse::product_place(const Product& product) const
 {
 	for (size_t i = 0; i < COUNT_SECTIONS; ++i)

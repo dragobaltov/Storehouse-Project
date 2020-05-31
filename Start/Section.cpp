@@ -30,6 +30,7 @@ Section& Section::operator=(const Section& other)
 
 Section::~Section() = default;
 
+/*! Returns the product in @param m_products at the given index.*/
 const Product& Section::operator[](size_t index) const
 {
 	return m_products[index];
@@ -40,6 +41,8 @@ void Section::add(const Product& product)
 	m_products.emplace_back(product);
 }
 
+/*! Removes the given quantity from the given product, if there is such in the section.
+ * If the quantity is greater than the available, all the products are removed.*/
 bool Section::remove(const Product& product, size_t quantity)
 {
 	for (size_t i = 0; i < m_products.size(); i++)
@@ -86,6 +89,7 @@ size_t Section::get_num() const
 	return m_num;
 }
 
+/*! Checks if the given place is free.*/
 bool Section::place_is_free(const Place& place) const
 {
 	for (size_t i = 0; i < m_products.size(); i++)
@@ -104,6 +108,7 @@ size_t Section::get_count_products() const
 	return m_products.size();
 }
 
+/*! Removes all products from the section.*/
 void Section::unload()
 {
 	m_products.clear();

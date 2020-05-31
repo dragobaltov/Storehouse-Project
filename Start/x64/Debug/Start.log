@@ -1,5 +1,2 @@
-﻿  Product.cpp
-  StorehouseEngine.cpp
-  Generating Code...
-C:\Users\USER\source\repos\Storehouse-Project\Start\Product.cpp(251,12): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+﻿  StorehouseEngine.cpp
   Start.vcxproj -> C:\Users\USER\source\repos\Storehouse-Project\x64\Debug\Start.exe

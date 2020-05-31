@@ -4,6 +4,7 @@
 
 StorehouseEngine::StorehouseEngine() = default;
 
+/*! Prints info about the supported commands.*/
 void StorehouseEngine::help() const
 {
 	Engine::help();
@@ -21,6 +22,13 @@ void StorehouseEngine::print() const
 	m_house.print_products(std::cout);
 }
 
+/*! Gets data from the user to create a Product object.
+ * If the product is already in the storehouse, increases its quantity with the given.
+ * If not, asks the user to input place data. If the input is not correct(the place is occupied or invalid),
+ * the user should input new data until it is valid.
+ * Finnaly, adds the product at the given place.
+ * @note All products are added with current date.
+ */
 void StorehouseEngine::add()
 {
 	std::string name = "";
@@ -74,6 +82,7 @@ void StorehouseEngine::log(const Date & date1, const Date & date2) const
 	m_house.log(date1, date2);
 }
 
+/*! Gets product's name and quantity. Invokes Storehouse::remove_product().*/
 void StorehouseEngine::remove()
 {
 	std::string name = "";
@@ -84,6 +93,7 @@ void StorehouseEngine::remove()
 	m_house.remove_product(name, quantity);
 }
 
+/*! Gets product's name, price and a period of time. Invokes Storehouse::loss().*/
 void StorehouseEngine::loss() const
 {
 	std::string name = "";
@@ -106,21 +116,25 @@ void StorehouseEngine::loss() const
 	m_house.loss(name, price, date1, date2);
 }
 
+/*! Loads data for @param m_house from a file.*/
 void StorehouseEngine::load(std::istream & in)
 {
 	in >> m_house;
 }
 
+/*! Unloads the data in @param m_house.*/
 void StorehouseEngine::unload()
 {
 	m_house.unload();
 }
 
+/*! Saves the data from @param m_house in a file.*/
 void StorehouseEngine::save_data(std::ostream & out) const
 {
 	out << m_house;
 }
 
+/*! Executes the given command.*/
 void StorehouseEngine::execute_command(const std::string & command, const std::string & additional)
 {
 	if (command == "open")
@@ -203,6 +217,7 @@ void StorehouseEngine::execute_command(const std::string & command, const std::s
 	
 }
 
+/*! Checks if the given command is valid.*/
 bool StorehouseEngine::is_valid_command(const std::string & command) const
 {
 	for (size_t i = 0; i < COUNT_COMMANDS; ++i)
@@ -216,6 +231,7 @@ bool StorehouseEngine::is_valid_command(const std::string & command) const
 	return false;
 }
 
+/*! Asks the user to input valid place data.*/
 void StorehouseEngine::read_place(Place & place) const
 {
 	size_t section = 0;
@@ -249,6 +265,7 @@ void StorehouseEngine::read_place(Place & place) const
 	place = { section, shelf, num };
 }
 
+/*! Asks the user to provide valid date.*/
 void StorehouseEngine::read_date(std::string& str_date, const std::string& prefix_msg) const
 {
 	std::cout << prefix_msg;
@@ -261,6 +278,7 @@ void StorehouseEngine::read_date(std::string& str_date, const std::string& prefi
 	}
 }
 
+/*! Asks the user to input correct unit(kg or liters).*/
 void StorehouseEngine::read_unit(std::string& unit, const std::string& prefix_msg) const
 {
 	std::cout << prefix_msg;

@@ -1,0 +1,189 @@
+\hypertarget{class_storehouse_engine}{}\doxysection{Storehouse\+Engine Class Reference}
+\label{class_storehouse_engine}\index{StorehouseEngine@{StorehouseEngine}}
+
+
+The class deals with user input and generates data for \mbox{\hyperlink{class_storehouse}{Storehouse}} class methods.  
+
+
+
+
+{\ttfamily \#include $<$Storehouse\+Engine.\+h$>$}
+
+Inheritance diagram for Storehouse\+Engine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_storehouse_engine}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_ab480c33358e06471e084f68ed10e5198}{load}} (std\+::istream \&) override
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_ae15df9b96a060839d488628a95ac42a0}{unload}} () override
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_aa16320b49277f422fc50eef218cd0c86}{save\+\_\+data}} (std\+::ostream \&) const override
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_ac3ddead7d59ebaef6f742cbae2833928}{help}} () const override
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_acc381e2168bd8ad4749abae1e5269eb4}{execute\+\_\+command}} (const std\+::string \&, const std\+::string \&) override
+\item 
+bool \mbox{\hyperlink{class_storehouse_engine_a92a17d1c73fa4501201d783853741772}{is\+\_\+valid\+\_\+command}} (const std\+::string \&) const override
+\item 
+\mbox{\Hypertarget{class_storehouse_engine_a61896a0ee9e1dce869a286a39c85666c}\label{class_storehouse_engine_a61896a0ee9e1dce869a286a39c85666c}} 
+void {\bfseries print} () const
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_a2c6c6b99f5db6529b424a71b09b955ae}{add}} ()
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_ab25894f4940ab6bfd16d5c6f023b8b67}{remove}} ()
+\item 
+\mbox{\Hypertarget{class_storehouse_engine_aff0a798d762f4ac6e6d0cbb152b2f0b9}\label{class_storehouse_engine_aff0a798d762f4ac6e6d0cbb152b2f0b9}} 
+void {\bfseries log} (const \mbox{\hyperlink{class_date}{Date}} \&, const \mbox{\hyperlink{class_date}{Date}} \&) const
+\item 
+\mbox{\Hypertarget{class_storehouse_engine_a2ba281d9117506acfa001d69ac1b595f}\label{class_storehouse_engine_a2ba281d9117506acfa001d69ac1b595f}} 
+void {\bfseries clean} ()
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_a0be62f4d7c6406aaee1659f179a4c172}{loss}} () const
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_ad90d02179535c747cd3a550d0a2a8784}{read\+\_\+place}} (\mbox{\hyperlink{class_place}{Place}} \&) const
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_a0bf0286e15b405fde00c3adbf1b2c209}{read\+\_\+date}} (std\+::string \&, const std\+::string \&) const
+\item 
+void \mbox{\hyperlink{class_storehouse_engine_aeb9f367790de5073281328eaa8dd1b9c}{read\+\_\+unit}} (std\+::string \&, const std\+::string \&) const
+\item 
+\mbox{\Hypertarget{class_storehouse_engine_a7f842eb8e093210a54eb39cdaf575eaa}\label{class_storehouse_engine_a7f842eb8e093210a54eb39cdaf575eaa}} 
+size\+\_\+t {\bfseries read\+\_\+quantity} (const std\+::string \&) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_storehouse_engine_ad2c6c020597823087919f57848efd69e}\label{class_storehouse_engine_ad2c6c020597823087919f57848efd69e}} 
+\mbox{\hyperlink{class_storehouse}{Storehouse}} {\bfseries m\+\_\+house} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The class deals with user input and generates data for \mbox{\hyperlink{class_storehouse}{Storehouse}} class methods. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_storehouse_engine_a2c6c6b99f5db6529b424a71b09b955ae}\label{class_storehouse_engine_a2c6c6b99f5db6529b424a71b09b955ae}} 
+\index{StorehouseEngine@{StorehouseEngine}!add@{add}}
+\index{add@{add}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Gets data from the user to create a \mbox{\hyperlink{class_product}{Product}} object. If the product is already in the storehouse, increases its quantity with the given. If not, asks the user to input place data. If the input is not correct(the place is occupied or invalid), the user should input new data until it is valid. Finnaly, adds the product at the given place. \begin{DoxyNote}{Note}
+All products are added with current date. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_storehouse_engine_acc381e2168bd8ad4749abae1e5269eb4}\label{class_storehouse_engine_acc381e2168bd8ad4749abae1e5269eb4}} 
+\index{StorehouseEngine@{StorehouseEngine}!execute\_command@{execute\_command}}
+\index{execute\_command@{execute\_command}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{execute\_command()}{execute\_command()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::execute\+\_\+command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{command,  }\item[{const std\+::string \&}]{additional }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Executes the given command. 
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+\mbox{\Hypertarget{class_storehouse_engine_ac3ddead7d59ebaef6f742cbae2833928}\label{class_storehouse_engine_ac3ddead7d59ebaef6f742cbae2833928}} 
+\index{StorehouseEngine@{StorehouseEngine}!help@{help}}
+\index{help@{help}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Prints info about the supported commands. 
+
+Reimplemented from \mbox{\hyperlink{class_engine_af1dccd371900e772afd3f392fd5f59ff}{Engine}}.
+
+\mbox{\Hypertarget{class_storehouse_engine_a92a17d1c73fa4501201d783853741772}\label{class_storehouse_engine_a92a17d1c73fa4501201d783853741772}} 
+\index{StorehouseEngine@{StorehouseEngine}!is\_valid\_command@{is\_valid\_command}}
+\index{is\_valid\_command@{is\_valid\_command}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_command()}{is\_valid\_command()}}
+{\footnotesize\ttfamily bool Storehouse\+Engine\+::is\+\_\+valid\+\_\+command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{command }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Checks if the given command is valid. 
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+\mbox{\Hypertarget{class_storehouse_engine_ab480c33358e06471e084f68ed10e5198}\label{class_storehouse_engine_ab480c33358e06471e084f68ed10e5198}} 
+\index{StorehouseEngine@{StorehouseEngine}!load@{load}}
+\index{load@{load}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::load (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Loads data for
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+house} & from a file. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+\mbox{\Hypertarget{class_storehouse_engine_a0be62f4d7c6406aaee1659f179a4c172}\label{class_storehouse_engine_a0be62f4d7c6406aaee1659f179a4c172}} 
+\index{StorehouseEngine@{StorehouseEngine}!loss@{loss}}
+\index{loss@{loss}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{loss()}{loss()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::loss (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Gets product\textquotesingle{}s name, price and a period of time. Invokes \mbox{\hyperlink{class_storehouse_ac99b54c043447577360e4c8fb4f3f5dd}{Storehouse\+::loss()}}. \mbox{\Hypertarget{class_storehouse_engine_a0bf0286e15b405fde00c3adbf1b2c209}\label{class_storehouse_engine_a0bf0286e15b405fde00c3adbf1b2c209}} 
+\index{StorehouseEngine@{StorehouseEngine}!read\_date@{read\_date}}
+\index{read\_date@{read\_date}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{read\_date()}{read\_date()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::read\+\_\+date (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str\+\_\+date,  }\item[{const std\+::string \&}]{prefix\+\_\+msg }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Asks the user to provide valid date. \mbox{\Hypertarget{class_storehouse_engine_ad90d02179535c747cd3a550d0a2a8784}\label{class_storehouse_engine_ad90d02179535c747cd3a550d0a2a8784}} 
+\index{StorehouseEngine@{StorehouseEngine}!read\_place@{read\_place}}
+\index{read\_place@{read\_place}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{read\_place()}{read\_place()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::read\+\_\+place (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_place}{Place}} \&}]{place }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Asks the user to input valid place data. \mbox{\Hypertarget{class_storehouse_engine_aeb9f367790de5073281328eaa8dd1b9c}\label{class_storehouse_engine_aeb9f367790de5073281328eaa8dd1b9c}} 
+\index{StorehouseEngine@{StorehouseEngine}!read\_unit@{read\_unit}}
+\index{read\_unit@{read\_unit}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{read\_unit()}{read\_unit()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::read\+\_\+unit (\begin{DoxyParamCaption}\item[{std\+::string \&}]{unit,  }\item[{const std\+::string \&}]{prefix\+\_\+msg }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Asks the user to input correct unit(kg or liters). \mbox{\Hypertarget{class_storehouse_engine_ab25894f4940ab6bfd16d5c6f023b8b67}\label{class_storehouse_engine_ab25894f4940ab6bfd16d5c6f023b8b67}} 
+\index{StorehouseEngine@{StorehouseEngine}!remove@{remove}}
+\index{remove@{remove}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Gets product\textquotesingle{}s name and quantity. Invokes \mbox{\hyperlink{class_storehouse_a42a5ba83a60508b949427bc90b7ffff4}{Storehouse\+::remove\+\_\+product()}}. \mbox{\Hypertarget{class_storehouse_engine_aa16320b49277f422fc50eef218cd0c86}\label{class_storehouse_engine_aa16320b49277f422fc50eef218cd0c86}} 
+\index{StorehouseEngine@{StorehouseEngine}!save\_data@{save\_data}}
+\index{save\_data@{save\_data}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{save\_data()}{save\_data()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::save\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Saves the data from
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+house} & in a file. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+\mbox{\Hypertarget{class_storehouse_engine_ae15df9b96a060839d488628a95ac42a0}\label{class_storehouse_engine_ae15df9b96a060839d488628a95ac42a0}} 
+\index{StorehouseEngine@{StorehouseEngine}!unload@{unload}}
+\index{unload@{unload}!StorehouseEngine@{StorehouseEngine}}
+\doxysubsubsection{\texorpdfstring{unload()}{unload()}}
+{\footnotesize\ttfamily void Storehouse\+Engine\+::unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Unloads the data in
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+house.} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_engine}{Engine}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Start/Storehouse\+Engine.\+h\item 
+Start/Storehouse\+Engine.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,124 @@
+\hypertarget{class_engine}{}\doxysection{Engine Class Reference}
+\label{class_engine}\index{Engine@{Engine}}
+
+
+Handles user input and executes basic commands(open, close, save, save as, help, exit)  
+
+
+
+
+{\ttfamily \#include $<$Engine.\+h$>$}
+
+Inheritance diagram for Engine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_engine}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_engine_a1a210cf30d6bd330b3649439ecd6d6cc}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_engine_a5d873650f17b91feaa1f84f9617dc9e0}{open}} (const std\+::string \&)
+\item 
+void \mbox{\hyperlink{class_engine_a6f00047153c2581a74c7c1912bfe5f36}{close}} ()
+\item 
+virtual void \mbox{\hyperlink{class_engine_ac3a90bda815333f961aaf526a739c063}{save\+\_\+as}} (const std\+::string \&) const
+\item 
+virtual void \mbox{\hyperlink{class_engine_af1dccd371900e772afd3f392fd5f59ff}{help}} () const
+\item 
+void \mbox{\hyperlink{class_engine_affdeea869ca053401295ef938b5277fa}{exit}} ()
+\item 
+void \mbox{\hyperlink{class_engine_a928f425a0391ba63b51dcb094179f2a2}{parse\+\_\+command}} (std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_engine_a00c63ee293dbf7f2f38fdb70b11e6b23}\label{class_engine_a00c63ee293dbf7f2f38fdb70b11e6b23}} 
+virtual void {\bfseries load} (std\+::istream \&)=0
+\item 
+\mbox{\Hypertarget{class_engine_ab7bfef9ae3a42954376b8f51791867f8}\label{class_engine_ab7bfef9ae3a42954376b8f51791867f8}} 
+virtual void {\bfseries unload} ()=0
+\item 
+\mbox{\Hypertarget{class_engine_af529241884f541c5e6ee7a3487b0993a}\label{class_engine_af529241884f541c5e6ee7a3487b0993a}} 
+virtual void {\bfseries save\+\_\+data} (std\+::ostream \&) const =0
+\item 
+\mbox{\Hypertarget{class_engine_a68af0b6f361e30241189c47db16e9b6d}\label{class_engine_a68af0b6f361e30241189c47db16e9b6d}} 
+virtual void {\bfseries execute\+\_\+command} (const std\+::string \&, const std\+::string \&)=0
+\item 
+\mbox{\Hypertarget{class_engine_ade59378890e8ae406176452d052adb77}\label{class_engine_ade59378890e8ae406176452d052adb77}} 
+virtual bool {\bfseries is\+\_\+valid\+\_\+command} (const std\+::string \&) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_engine_a65bc7624d97c2629502e7bd9e577fe51}\label{class_engine_a65bc7624d97c2629502e7bd9e577fe51}} 
+std\+::string {\bfseries m\+\_\+current\+\_\+file} \{ \char`\"{}\char`\"{} \}
+\item 
+\mbox{\Hypertarget{class_engine_a9d458d004f702a11ab72da8e6e627298}\label{class_engine_a9d458d004f702a11ab72da8e6e627298}} 
+Status {\bfseries m\+\_\+status} \{ Status\+::closed \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles user input and executes basic commands(open, close, save, save as, help, exit) 
+
+Contains a string, in which is stored the name of the currently opened file(or the last one that was open) and an object of type enum Status, which can accept 3 different values -\/ open, closed and exit.~\newline
+open status\+: means there is a currently opened file and all commands can be executed~\newline
+closed status\+: means there is no opened file; the only functions that can be executed are open, help and exit~\newline
+exit status\+: means the user has given command exit and wants to stop the program 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_engine_a6f00047153c2581a74c7c1912bfe5f36}\label{class_engine_a6f00047153c2581a74c7c1912bfe5f36}} 
+\index{Engine@{Engine}!close@{close}}
+\index{close@{close}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Engine\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets the status to closed and invokes the virtual function unload. \mbox{\Hypertarget{class_engine_affdeea869ca053401295ef938b5277fa}\label{class_engine_affdeea869ca053401295ef938b5277fa}} 
+\index{Engine@{Engine}!exit@{exit}}
+\index{exit@{exit}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily void Engine\+::exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Exits the program after 1 second. \mbox{\Hypertarget{class_engine_af1dccd371900e772afd3f392fd5f59ff}\label{class_engine_af1dccd371900e772afd3f392fd5f59ff}} 
+\index{Engine@{Engine}!help@{help}}
+\index{help@{help}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily void Engine\+::help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Prints info about the basic commands. 
+
+Reimplemented in \mbox{\hyperlink{class_storehouse_engine_ac3ddead7d59ebaef6f742cbae2833928}{Storehouse\+Engine}}.
+
+\mbox{\Hypertarget{class_engine_a5d873650f17b91feaa1f84f9617dc9e0}\label{class_engine_a5d873650f17b91feaa1f84f9617dc9e0}} 
+\index{Engine@{Engine}!open@{open}}
+\index{open@{open}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Engine\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Checks if there isn\textquotesingle{}t already opened file. If not, opens the given file and invokes the virtual function load. If the file doesn\textquotesingle{}t exists, it is created. \mbox{\Hypertarget{class_engine_a928f425a0391ba63b51dcb094179f2a2}\label{class_engine_a928f425a0391ba63b51dcb094179f2a2}} 
+\index{Engine@{Engine}!parse\_command@{parse\_command}}
+\index{parse\_command@{parse\_command}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{parse\_command()}{parse\_command()}}
+{\footnotesize\ttfamily void Engine\+::parse\+\_\+command (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parses user input to a command. \mbox{\Hypertarget{class_engine_a1a210cf30d6bd330b3649439ecd6d6cc}\label{class_engine_a1a210cf30d6bd330b3649439ecd6d6cc}} 
+\index{Engine@{Engine}!run@{run}}
+\index{run@{run}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Engine\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Start the program and accept user input, which is parsed to a command. \mbox{\Hypertarget{class_engine_ac3a90bda815333f961aaf526a739c063}\label{class_engine_ac3a90bda815333f961aaf526a739c063}} 
+\index{Engine@{Engine}!save\_as@{save\_as}}
+\index{save\_as@{save\_as}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{save\_as()}{save\_as()}}
+{\footnotesize\ttfamily void Engine\+::save\+\_\+as (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Checks if the given file can be opened. If yes, invokes the virtual function save\+\_\+data. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Start/Engine.\+h\item 
+Start/Engine.\+cpp\end{DoxyCompactItemize}

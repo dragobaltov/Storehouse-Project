@@ -10,7 +10,8 @@ ProductInfo::ProductInfo(const std::string& name, const std::string& unit, size_
 ProductInfo::ProductInfo(const ProductInfo & other) : m_name{ other.m_name }, m_unit{ other.m_unit },
 m_quantity{ other.m_quantity }, m_place{ other.m_place } {}
 
-ProductInfo::ProductInfo(const std::string & text)
+/*! Parses string to ProductInfo. Accepts string in the format "{quantity} {unit} of {name} at {place}"*/
+ProductInfo::ProductInfo(const std::string& text)
 {
 	size_t delim1_pos = text.find(" of ");
 	size_t delim2_pos = text.find(" at ");
@@ -61,6 +62,7 @@ const Place& ProductInfo::get_place() const
 	return m_place;
 }
 
+/*! Prints ProductInfo object in the format "{quantity} {unit} of {name} at {place}"*/
 std::ostream& operator<<(std::ostream& out, const ProductInfo& pr_info)
 {
 	out << pr_info.m_quantity << ' ' << pr_info.m_unit << " of " << pr_info.m_name << " at " << pr_info.m_place;

@@ -1,0 +1,103 @@
+\hypertarget{class_place}{}\doxysection{Place Class Reference}
+\label{class_place}\index{Place@{Place}}
+
+
+Describes the location of a product in the storehouse.  
+
+
+
+
+{\ttfamily \#include $<$Place.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_place_a4b812b0ca969462fa1f067f8f011ff34}\label{class_place_a4b812b0ca969462fa1f067f8f011ff34}} 
+{\bfseries Place} (size\+\_\+t, size\+\_\+t, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_place_a8449a49f96e729e2f4ac99489f401098}\label{class_place_a8449a49f96e729e2f4ac99489f401098}} 
+{\bfseries Place} (const \mbox{\hyperlink{class_place}{Place}} \&)
+\item 
+\mbox{\hyperlink{class_place_aa20d1ed93cb5cae62c71a92bc7c2829c}{Place}} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_place_a66563281320971790601020881426d18}\label{class_place_a66563281320971790601020881426d18}} 
+\mbox{\hyperlink{class_place}{Place}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_place}{Place}} \&)
+\item 
+bool \mbox{\hyperlink{class_place_a451f01dfa8b848e11de68d6b6a034325}{operator==}} (const \mbox{\hyperlink{class_place}{Place}} \&) const
+\item 
+\mbox{\Hypertarget{class_place_a752d55a094b2d5b4c89d42a94fbe397f}\label{class_place_a752d55a094b2d5b4c89d42a94fbe397f}} 
+void {\bfseries set\+\_\+section} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_place_aa04a61d270f66091764c68d86bf1114f}\label{class_place_aa04a61d270f66091764c68d86bf1114f}} 
+void {\bfseries set\+\_\+shelf} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_place_a5e69e407a055fd106eff00c7ee0566cb}\label{class_place_a5e69e407a055fd106eff00c7ee0566cb}} 
+void {\bfseries set\+\_\+num} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_place_afd1d8ff41d4435f16731e2c5093e2384}\label{class_place_afd1d8ff41d4435f16731e2c5093e2384}} 
+size\+\_\+t {\bfseries get\+\_\+section} () const
+\item 
+\mbox{\Hypertarget{class_place_a11743ec700ee1c1813174d99427cfdb4}\label{class_place_a11743ec700ee1c1813174d99427cfdb4}} 
+size\+\_\+t {\bfseries get\+\_\+shelf} () const
+\item 
+\mbox{\Hypertarget{class_place_af5d8c5604eaeebbe3a13e39baaf3e142}\label{class_place_af5d8c5604eaeebbe3a13e39baaf3e142}} 
+size\+\_\+t {\bfseries get\+\_\+num} () const
+\item 
+std\+::string \mbox{\hyperlink{class_place_a2baf16e26c440a971259a432c8fa31a2}{get\+\_\+string\+\_\+representation}} () const
+\item 
+\mbox{\Hypertarget{class_place_aad7018d3558a793bd0ac85f3c40b727b}\label{class_place_aad7018d3558a793bd0ac85f3c40b727b}} 
+void {\bfseries change} (size\+\_\+t, size\+\_\+t, size\+\_\+t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_place_a79b5ef3ce66f066fda413ccfe98dbe80}\label{class_place_a79b5ef3ce66f066fda413ccfe98dbe80}} 
+size\+\_\+t {\bfseries m\+\_\+section} \{ 0 \}
+\item 
+\mbox{\Hypertarget{class_place_aab6065330b5212358f7e11f0573c8c00}\label{class_place_aab6065330b5212358f7e11f0573c8c00}} 
+size\+\_\+t {\bfseries m\+\_\+shelf} \{ 0 \}
+\item 
+\mbox{\Hypertarget{class_place_af112b0fdaa285a397ad970d934c48ded}\label{class_place_af112b0fdaa285a397ad970d934c48ded}} 
+size\+\_\+t {\bfseries m\+\_\+num} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_place_a1d2a6e96de1b7f48b7892996965d9c05}\label{class_place_a1d2a6e96de1b7f48b7892996965d9c05}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{class_place}{Place}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes the location of a product in the storehouse. 
+
+Contains section, shelf and cell number. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_place_aa20d1ed93cb5cae62c71a92bc7c2829c}\label{class_place_aa20d1ed93cb5cae62c71a92bc7c2829c}} 
+\index{Place@{Place}!Place@{Place}}
+\index{Place@{Place}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{Place()}{Place()}}
+{\footnotesize\ttfamily Place\+::\+Place (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text\+\_\+place }\end{DoxyParamCaption})}
+
+Parses string to \mbox{\hyperlink{class_place}{Place}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_place_a2baf16e26c440a971259a432c8fa31a2}\label{class_place_a2baf16e26c440a971259a432c8fa31a2}} 
+\index{Place@{Place}!get\_string\_representation@{get\_string\_representation}}
+\index{get\_string\_representation@{get\_string\_representation}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{get\_string\_representation()}{get\_string\_representation()}}
+{\footnotesize\ttfamily std\+::string Place\+::get\+\_\+string\+\_\+representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a string in the format \char`\"{}section \{\#section\}, shelf \{\#shelf\}, number \{\#cell\}\char`\"{} \mbox{\Hypertarget{class_place_a451f01dfa8b848e11de68d6b6a034325}\label{class_place_a451f01dfa8b848e11de68d6b6a034325}} 
+\index{Place@{Place}!operator==@{operator==}}
+\index{operator==@{operator==}!Place@{Place}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Place\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_place}{Place}} \&}]{other }\end{DoxyParamCaption}) const}
+
+Compares section, shelf and cell number. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Start/Place.\+h\item 
+Start/Place.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{class_section}{}\doxysection{Section Class Reference}
+\label{class_section}\index{Section@{Section}}
+
+
+Represents a section in the storehouse.  
+
+
+
+
+{\ttfamily \#include $<$Section.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_section_a2eeafa8e1e6824bf715403e64c966cf2}\label{class_section_a2eeafa8e1e6824bf715403e64c966cf2}} 
+{\bfseries Section} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_section_a3c65ce6e4438c024bfdd6233846c209f}\label{class_section_a3c65ce6e4438c024bfdd6233846c209f}} 
+{\bfseries Section} (const \mbox{\hyperlink{class_section}{Section}} \&)
+\item 
+\mbox{\Hypertarget{class_section_a67acace9430319081de8ea80518c02e1}\label{class_section_a67acace9430319081de8ea80518c02e1}} 
+\mbox{\hyperlink{class_section}{Section}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_section}{Section}} \&)
+\item 
+const \mbox{\hyperlink{class_product}{Product}} \& \mbox{\hyperlink{class_section_acfc34cb4f144246ee70f09e7ed733970}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t) const
+\item 
+\mbox{\Hypertarget{class_section_a300381eb092c50ffc5376293db3ac072}\label{class_section_a300381eb092c50ffc5376293db3ac072}} 
+void {\bfseries set\+\_\+num} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_section_a12d60a3d55ea47758aa64f7c6ff361ae}\label{class_section_a12d60a3d55ea47758aa64f7c6ff361ae}} 
+size\+\_\+t {\bfseries get\+\_\+num} () const
+\item 
+\mbox{\Hypertarget{class_section_a381b87a2f9d7d3456b7619152ebbcbc5}\label{class_section_a381b87a2f9d7d3456b7619152ebbcbc5}} 
+void {\bfseries add} (const \mbox{\hyperlink{class_product}{Product}} \&)
+\item 
+bool \mbox{\hyperlink{class_section_aa98102f1b53fc125cbb8d5322c7866b8}{remove}} (const \mbox{\hyperlink{class_product}{Product}} \&, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_section_ab0de0e71f9d3bc497346fff60dee3794}\label{class_section_ab0de0e71f9d3bc497346fff60dee3794}} 
+void {\bfseries increase\+\_\+quantity\+\_\+of} (const \mbox{\hyperlink{class_product}{Product}} \&)
+\item 
+bool \mbox{\hyperlink{class_section_abbb43ba41815e0048316413c91e5c720}{place\+\_\+is\+\_\+free}} (const \mbox{\hyperlink{class_place}{Place}} \&) const
+\item 
+\mbox{\Hypertarget{class_section_ad83cfa868fae8a50f3f932df5edc57b9}\label{class_section_ad83cfa868fae8a50f3f932df5edc57b9}} 
+size\+\_\+t {\bfseries get\+\_\+count\+\_\+products} () const
+\item 
+void \mbox{\hyperlink{class_section_aa7714920d4c99499c942469fd5be70a1}{unload}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_section_a59b490255490470e2380190b7ef72555}\label{class_section_a59b490255490470e2380190b7ef72555}} 
+std\+::vector$<$ \mbox{\hyperlink{class_product}{Product}} $>$ {\bfseries m\+\_\+products} \{\}
+\item 
+\mbox{\Hypertarget{class_section_a32cac59c6dbdc71e921a7a608f872921}\label{class_section_a32cac59c6dbdc71e921a7a608f872921}} 
+size\+\_\+t {\bfseries m\+\_\+num} \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a section in the storehouse. 
+
+Keeps section number and vector of products. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_section_acfc34cb4f144246ee70f09e7ed733970}\label{class_section_acfc34cb4f144246ee70f09e7ed733970}} 
+\index{Section@{Section}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_product}{Product}} \& Section\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+Returns the product in
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+products} & at the given index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_section_abbb43ba41815e0048316413c91e5c720}\label{class_section_abbb43ba41815e0048316413c91e5c720}} 
+\index{Section@{Section}!place\_is\_free@{place\_is\_free}}
+\index{place\_is\_free@{place\_is\_free}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{place\_is\_free()}{place\_is\_free()}}
+{\footnotesize\ttfamily bool Section\+::place\+\_\+is\+\_\+free (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_place}{Place}} \&}]{place }\end{DoxyParamCaption}) const}
+
+Checks if the given place is free. \mbox{\Hypertarget{class_section_aa98102f1b53fc125cbb8d5322c7866b8}\label{class_section_aa98102f1b53fc125cbb8d5322c7866b8}} 
+\index{Section@{Section}!remove@{remove}}
+\index{remove@{remove}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool Section\+::remove (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_product}{Product}} \&}]{product,  }\item[{size\+\_\+t}]{quantity }\end{DoxyParamCaption})}
+
+Removes the given quantity from the given product, if there is such in the section. If the quantity is greater than the available, all the products are removed. \mbox{\Hypertarget{class_section_aa7714920d4c99499c942469fd5be70a1}\label{class_section_aa7714920d4c99499c942469fd5be70a1}} 
+\index{Section@{Section}!unload@{unload}}
+\index{unload@{unload}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{unload()}{unload()}}
+{\footnotesize\ttfamily void Section\+::unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes all products from the section. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Start/Section.\+h\item 
+Start/Section.\+cpp\end{DoxyCompactItemize}

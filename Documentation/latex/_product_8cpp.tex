@@ -1,0 +1,54 @@
+\hypertarget{_product_8cpp}{}\doxysection{Start/\+Product.cpp File Reference}
+\label{_product_8cpp}\index{Start/Product.cpp@{Start/Product.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include \char`\"{}Place.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Date.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Product.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_product_8cpp_a33a2507fc8244e775db7a22203950ad3}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_product}{Product}} \&pr)
+\item 
+std\+::istream \& \mbox{\hyperlink{_product_8cpp_afd600ce10335e458abcdaa71ff117446}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_product}{Product}} \&pr)
+\item 
+std\+::string \mbox{\hyperlink{_product_8cpp_a9659c194817b57c9a597f99cbd5e91d5}{get\+\_\+data}} (std\+::istream \&in)
+\item 
+bool \mbox{\hyperlink{_product_8cpp_acf578e5c5642364acf0d18cc5f253fb5}{is\+\_\+in\+\_\+units}} (const std\+::string \&unit)
+\item 
+int \mbox{\hyperlink{_product_8cpp_a6c56c5595db3685a5bac05bc4073024a}{get\+\_\+first\+\_\+index}} (const std\+::string \&text, char delimeter)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_product_8cpp_a9659c194817b57c9a597f99cbd5e91d5}\label{_product_8cpp_a9659c194817b57c9a597f99cbd5e91d5}} 
+\index{Product.cpp@{Product.cpp}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!Product.cpp@{Product.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily std\+::string get\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_product_8cpp_a6c56c5595db3685a5bac05bc4073024a}\label{_product_8cpp_a6c56c5595db3685a5bac05bc4073024a}} 
+\index{Product.cpp@{Product.cpp}!get\_first\_index@{get\_first\_index}}
+\index{get\_first\_index@{get\_first\_index}!Product.cpp@{Product.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_first\_index()}{get\_first\_index()}}
+{\footnotesize\ttfamily int get\+\_\+first\+\_\+index (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{char}]{delimeter }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_product_8cpp_acf578e5c5642364acf0d18cc5f253fb5}\label{_product_8cpp_acf578e5c5642364acf0d18cc5f253fb5}} 
+\index{Product.cpp@{Product.cpp}!is\_in\_units@{is\_in\_units}}
+\index{is\_in\_units@{is\_in\_units}!Product.cpp@{Product.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_in\_units()}{is\_in\_units()}}
+{\footnotesize\ttfamily bool is\+\_\+in\+\_\+units (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{unit }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_product_8cpp_a33a2507fc8244e775db7a22203950ad3}\label{_product_8cpp_a33a2507fc8244e775db7a22203950ad3}} 
+\index{Product.cpp@{Product.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Product.cpp@{Product.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_product}{Product}} \&}]{pr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_product_8cpp_afd600ce10335e458abcdaa71ff117446}\label{_product_8cpp_afd600ce10335e458abcdaa71ff117446}} 
+\index{Product.cpp@{Product.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Product.cpp@{Product.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{class_product}{Product}} \&}]{pr }\end{DoxyParamCaption})}
+

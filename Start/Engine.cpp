@@ -8,6 +8,7 @@
 
 Engine::Engine() = default;
 
+/*! Start the program and accept user input, which is parsed to a command.*/
 void Engine::run()
 {
 	std::string input;
@@ -20,6 +21,9 @@ void Engine::run()
 	}
 }
 
+/*! Checks if there isn't already opened file. If not, opens the given file and invokes
+ * the virtual function load.
+ * If the file doesn't exists, it is created.*/
 void Engine::open(const std::string & file_name)
 {
 	if (m_status == Status::open)
@@ -47,6 +51,7 @@ void Engine::open(const std::string & file_name)
 	std::cout << "Successfully opened " << m_current_file << '\n';
 }
 
+/*! Checks if the given file can be opened. If yes, invokes the virtual function save_data.*/
 void Engine::save_as(const std::string & file_name) const
 {
 	std::ofstream out;
@@ -63,6 +68,7 @@ void Engine::save_as(const std::string & file_name) const
 	std::cout << "Successfully saved changes in " << file_name << '\n';
 }
 
+/*! Sets the status to closed and invokes the virtual function unload.*/
 void Engine::close()
 {
 	m_status = Status::closed;
@@ -70,6 +76,7 @@ void Engine::close()
 	std::cout << "Successfully closed " << m_current_file << '\n';
 }
 
+/*! Exits the program after 1 second.*/
 void Engine::exit()
 {
 	std::cout << "Exiting the program...";
@@ -78,6 +85,7 @@ void Engine::exit()
 	m_status = Status::exit;
 }
 
+/*! Prints info about the basic commands.*/
 void Engine::help() const
 {
 	std::cout << "The following commands are supported:\n";
@@ -88,6 +96,7 @@ void Engine::help() const
 	std::cout << "exit - exits the program\n";
 }
 
+/*! Parses user input to a command.*/
 void Engine::parse_command(std::string & input)
 {
 	std::pair<std::string, std::string> tokens = split_in_two(input, ' ');

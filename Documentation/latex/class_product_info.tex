@@ -1,0 +1,72 @@
+\hypertarget{class_product_info}{}\doxysection{Product\+Info Class Reference}
+\label{class_product_info}\index{ProductInfo@{ProductInfo}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_info_a381c364ec84f8516abeba7b69ca99d7f}\label{class_product_info_a381c364ec84f8516abeba7b69ca99d7f}} 
+{\bfseries Product\+Info} (const std\+::string \&, const std\+::string \&, size\+\_\+t, const \mbox{\hyperlink{class_place}{Place}} \&)
+\item 
+\mbox{\Hypertarget{class_product_info_aed3d60c0e1e51408b2815831a6628158}\label{class_product_info_aed3d60c0e1e51408b2815831a6628158}} 
+{\bfseries Product\+Info} (const \mbox{\hyperlink{class_product_info}{Product\+Info}} \&)
+\item 
+\mbox{\hyperlink{class_product_info_aa96336045024cdd72a64dd6529579186}{Product\+Info}} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_product_info_a46d7646d128818b12f74328118648e08}\label{class_product_info_a46d7646d128818b12f74328118648e08}} 
+\mbox{\hyperlink{class_product_info}{Product\+Info}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_product_info}{Product\+Info}} \&)
+\item 
+\mbox{\Hypertarget{class_product_info_a0160e3a04d666b6ab66a77874ea05db8}\label{class_product_info_a0160e3a04d666b6ab66a77874ea05db8}} 
+const std\+::string \& {\bfseries get\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_product_info_ae97624525f82117c3eb633578de5eaa1}\label{class_product_info_ae97624525f82117c3eb633578de5eaa1}} 
+const std\+::string \& {\bfseries get\+\_\+unit} () const
+\item 
+\mbox{\Hypertarget{class_product_info_ae453e8f7ea05c07094dd6d5acebf1d20}\label{class_product_info_ae453e8f7ea05c07094dd6d5acebf1d20}} 
+size\+\_\+t {\bfseries get\+\_\+quantity} () const
+\item 
+\mbox{\Hypertarget{class_product_info_ac8bb5be36c8b83a7ed9447451549def6}\label{class_product_info_ac8bb5be36c8b83a7ed9447451549def6}} 
+const \mbox{\hyperlink{class_place}{Place}} \& {\bfseries get\+\_\+place} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_info_aa3123d84c343081586b4cbb34573d30c}\label{class_product_info_aa3123d84c343081586b4cbb34573d30c}} 
+std\+::string {\bfseries m\+\_\+name} \{\char`\"{}\char`\"{}\}
+\item 
+\mbox{\Hypertarget{class_product_info_a0ee2ae7c03321c201288c254119f3a1e}\label{class_product_info_a0ee2ae7c03321c201288c254119f3a1e}} 
+std\+::string {\bfseries m\+\_\+unit} \{\char`\"{}\char`\"{}\}
+\item 
+\mbox{\Hypertarget{class_product_info_ab5358f31ab6095ef7394069370cc65ed}\label{class_product_info_ab5358f31ab6095ef7394069370cc65ed}} 
+size\+\_\+t {\bfseries m\+\_\+quantity} \{0\}
+\item 
+\mbox{\Hypertarget{class_product_info_abd8df4cfff0d75a49fde06f24fa0b587}\label{class_product_info_abd8df4cfff0d75a49fde06f24fa0b587}} 
+\mbox{\hyperlink{class_place}{Place}} {\bfseries m\+\_\+place} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_product_info_af71610ddf26c16950c103d0ffc08c4b6}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_product_info}{Product\+Info}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_product_info_aa96336045024cdd72a64dd6529579186}\label{class_product_info_aa96336045024cdd72a64dd6529579186}} 
+\index{ProductInfo@{ProductInfo}!ProductInfo@{ProductInfo}}
+\index{ProductInfo@{ProductInfo}!ProductInfo@{ProductInfo}}
+\doxysubsubsection{\texorpdfstring{ProductInfo()}{ProductInfo()}}
+{\footnotesize\ttfamily Product\+Info\+::\+Product\+Info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+Parses string to \mbox{\hyperlink{class_product_info}{Product\+Info}}. Accepts string in the format \char`\"{}\{quantity\} \{unit\} of \{name\} at \{place\}\char`\"{} 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_product_info_af71610ddf26c16950c103d0ffc08c4b6}\label{class_product_info_af71610ddf26c16950c103d0ffc08c4b6}} 
+\index{ProductInfo@{ProductInfo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ProductInfo@{ProductInfo}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_product_info}{Product\+Info}} \&}]{pr\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Prints \mbox{\hyperlink{class_product_info}{Product\+Info}} object in the format \char`\"{}\{quantity\} \{unit\} of \{name\} at \{place\}\char`\"{} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Start/Product\+Info.\+h\item 
+Start/Product\+Info.\+cpp\end{DoxyCompactItemize}

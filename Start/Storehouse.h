@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 
+/*! The class stores all sections and changes that has been made.*/
 class Storehouse
 {
 	friend std::istream& operator>>(std::istream&, Storehouse&);

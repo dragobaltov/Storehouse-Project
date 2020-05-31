@@ -1,0 +1,72 @@
+\hypertarget{_product_8h}{}\doxysection{Start/\+Product.h File Reference}
+\label{_product_8h}\index{Start/Product.h@{Start/Product.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include \char`\"{}Place.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Date.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Product\+Info.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_product}{Product}}
+\begin{DoxyCompactList}\small\item\em Keeps all the needed information about a product. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_product_8h_acf578e5c5642364acf0d18cc5f253fb5}{is\+\_\+in\+\_\+units}} (const std\+::string \&unit)
+\item 
+std\+::string \mbox{\hyperlink{_product_8h_ac58059ff194745c0afeb13db1f7c38d1}{to\+\_\+lower}} (const std\+::string \&)
+\item 
+int \mbox{\hyperlink{_product_8h_a3d72d1584f6f05f6e2bc7646efe54ea5}{get\+\_\+first\+\_\+index}} (const std\+::string \&, char)
+\item 
+std\+::string \mbox{\hyperlink{_product_8h_a2fd616d225536b4326672c4eb5f96d2c}{get\+\_\+data}} (std\+::istream \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const size\+\_\+t \mbox{\hyperlink{_product_8h_aa0581bb94b0d7de8d4d0b74f08dd857f}{C\+O\+U\+N\+T\+\_\+\+U\+N\+I\+TS}} = 6
+\item 
+const std\+::string \mbox{\hyperlink{_product_8h_aa765976e349b01e70c6a40f6548151de}{U\+N\+I\+TS}} \mbox{[}\mbox{\hyperlink{_product_8h_aa0581bb94b0d7de8d4d0b74f08dd857f}{C\+O\+U\+N\+T\+\_\+\+U\+N\+I\+TS}}\mbox{]} = \{ \char`\"{}kg\char`\"{}, \char`\"{}l\char`\"{}, \char`\"{}kilograms\char`\"{}, \char`\"{}liters\char`\"{}, \char`\"{}kilogram\char`\"{}, \char`\"{}liter\char`\"{} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_product_8h_a2fd616d225536b4326672c4eb5f96d2c}\label{_product_8h_a2fd616d225536b4326672c4eb5f96d2c}} 
+\index{Product.h@{Product.h}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!Product.h@{Product.h}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily std\+::string get\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_product_8h_a3d72d1584f6f05f6e2bc7646efe54ea5}\label{_product_8h_a3d72d1584f6f05f6e2bc7646efe54ea5}} 
+\index{Product.h@{Product.h}!get\_first\_index@{get\_first\_index}}
+\index{get\_first\_index@{get\_first\_index}!Product.h@{Product.h}}
+\doxysubsubsection{\texorpdfstring{get\_first\_index()}{get\_first\_index()}}
+{\footnotesize\ttfamily int get\+\_\+first\+\_\+index (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{,  }\item[{char}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_product_8h_acf578e5c5642364acf0d18cc5f253fb5}\label{_product_8h_acf578e5c5642364acf0d18cc5f253fb5}} 
+\index{Product.h@{Product.h}!is\_in\_units@{is\_in\_units}}
+\index{is\_in\_units@{is\_in\_units}!Product.h@{Product.h}}
+\doxysubsubsection{\texorpdfstring{is\_in\_units()}{is\_in\_units()}}
+{\footnotesize\ttfamily bool is\+\_\+in\+\_\+units (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{unit }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_product_8h_ac58059ff194745c0afeb13db1f7c38d1}\label{_product_8h_ac58059ff194745c0afeb13db1f7c38d1}} 
+\index{Product.h@{Product.h}!to\_lower@{to\_lower}}
+\index{to\_lower@{to\_lower}!Product.h@{Product.h}}
+\doxysubsubsection{\texorpdfstring{to\_lower()}{to\_lower()}}
+{\footnotesize\ttfamily std\+::string to\+\_\+lower (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_product_8h_aa0581bb94b0d7de8d4d0b74f08dd857f}\label{_product_8h_aa0581bb94b0d7de8d4d0b74f08dd857f}} 
+\index{Product.h@{Product.h}!COUNT\_UNITS@{COUNT\_UNITS}}
+\index{COUNT\_UNITS@{COUNT\_UNITS}!Product.h@{Product.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_UNITS}{COUNT\_UNITS}}
+{\footnotesize\ttfamily const size\+\_\+t C\+O\+U\+N\+T\+\_\+\+U\+N\+I\+TS = 6}
+
+\mbox{\Hypertarget{_product_8h_aa765976e349b01e70c6a40f6548151de}\label{_product_8h_aa765976e349b01e70c6a40f6548151de}} 
+\index{Product.h@{Product.h}!UNITS@{UNITS}}
+\index{UNITS@{UNITS}!Product.h@{Product.h}}
+\doxysubsubsection{\texorpdfstring{UNITS}{UNITS}}
+{\footnotesize\ttfamily const std\+::string U\+N\+I\+TS\mbox{[}\mbox{\hyperlink{_product_8h_aa0581bb94b0d7de8d4d0b74f08dd857f}{C\+O\+U\+N\+T\+\_\+\+U\+N\+I\+TS}}\mbox{]} = \{ \char`\"{}kg\char`\"{}, \char`\"{}l\char`\"{}, \char`\"{}kilograms\char`\"{}, \char`\"{}liters\char`\"{}, \char`\"{}kilogram\char`\"{}, \char`\"{}liter\char`\"{} \}}
+

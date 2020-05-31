@@ -1,0 +1,62 @@
+\hypertarget{_section_8h}{}\doxysection{Start/\+Section.h File Reference}
+\label{_section_8h}\index{Start/Section.h@{Start/Section.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}Product.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_section}{Section}}
+\begin{DoxyCompactList}\small\item\em Represents a section in the storehouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_section_8h_af513dafe6d96e0ed95341cdd0a146d7d}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_section}{Section}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const size\+\_\+t \mbox{\hyperlink{_section_8h_ad391cdbd26b5d046394dc88a498cc86b}{C\+O\+U\+N\+T\+\_\+\+S\+E\+C\+T\+I\+O\+NS}} = 10
+\item 
+const size\+\_\+t \mbox{\hyperlink{_section_8h_a0ddab556d292fd0b51b032bd36e46349}{C\+O\+U\+N\+T\+\_\+\+S\+H\+E\+L\+V\+ES}} = 10
+\item 
+const size\+\_\+t \mbox{\hyperlink{_section_8h_af12e321705590c968d4493271d5df76c}{S\+H\+E\+L\+F\+\_\+\+C\+A\+P\+A\+C\+I\+TY}} = 10
+\item 
+const size\+\_\+t \mbox{\hyperlink{_section_8h_abf06528523c8d1156f9776f2b11d3a7d}{C\+A\+P\+A\+C\+I\+TY}} = \mbox{\hyperlink{_section_8h_a0ddab556d292fd0b51b032bd36e46349}{C\+O\+U\+N\+T\+\_\+\+S\+H\+E\+L\+V\+ES}} $\ast$ \mbox{\hyperlink{_section_8h_af12e321705590c968d4493271d5df76c}{S\+H\+E\+L\+F\+\_\+\+C\+A\+P\+A\+C\+I\+TY}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_section_8h_af513dafe6d96e0ed95341cdd0a146d7d}\label{_section_8h_af513dafe6d96e0ed95341cdd0a146d7d}} 
+\index{Section.h@{Section.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Section.h@{Section.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{,  }\item[{const \mbox{\hyperlink{class_section}{Section}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_section_8h_abf06528523c8d1156f9776f2b11d3a7d}\label{_section_8h_abf06528523c8d1156f9776f2b11d3a7d}} 
+\index{Section.h@{Section.h}!CAPACITY@{CAPACITY}}
+\index{CAPACITY@{CAPACITY}!Section.h@{Section.h}}
+\doxysubsubsection{\texorpdfstring{CAPACITY}{CAPACITY}}
+{\footnotesize\ttfamily const size\+\_\+t C\+A\+P\+A\+C\+I\+TY = \mbox{\hyperlink{_section_8h_a0ddab556d292fd0b51b032bd36e46349}{C\+O\+U\+N\+T\+\_\+\+S\+H\+E\+L\+V\+ES}} $\ast$ \mbox{\hyperlink{_section_8h_af12e321705590c968d4493271d5df76c}{S\+H\+E\+L\+F\+\_\+\+C\+A\+P\+A\+C\+I\+TY}}}
+
+\mbox{\Hypertarget{_section_8h_ad391cdbd26b5d046394dc88a498cc86b}\label{_section_8h_ad391cdbd26b5d046394dc88a498cc86b}} 
+\index{Section.h@{Section.h}!COUNT\_SECTIONS@{COUNT\_SECTIONS}}
+\index{COUNT\_SECTIONS@{COUNT\_SECTIONS}!Section.h@{Section.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_SECTIONS}{COUNT\_SECTIONS}}
+{\footnotesize\ttfamily const size\+\_\+t C\+O\+U\+N\+T\+\_\+\+S\+E\+C\+T\+I\+O\+NS = 10}
+
+\mbox{\Hypertarget{_section_8h_a0ddab556d292fd0b51b032bd36e46349}\label{_section_8h_a0ddab556d292fd0b51b032bd36e46349}} 
+\index{Section.h@{Section.h}!COUNT\_SHELVES@{COUNT\_SHELVES}}
+\index{COUNT\_SHELVES@{COUNT\_SHELVES}!Section.h@{Section.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_SHELVES}{COUNT\_SHELVES}}
+{\footnotesize\ttfamily const size\+\_\+t C\+O\+U\+N\+T\+\_\+\+S\+H\+E\+L\+V\+ES = 10}
+
+\mbox{\Hypertarget{_section_8h_af12e321705590c968d4493271d5df76c}\label{_section_8h_af12e321705590c968d4493271d5df76c}} 
+\index{Section.h@{Section.h}!SHELF\_CAPACITY@{SHELF\_CAPACITY}}
+\index{SHELF\_CAPACITY@{SHELF\_CAPACITY}!Section.h@{Section.h}}
+\doxysubsubsection{\texorpdfstring{SHELF\_CAPACITY}{SHELF\_CAPACITY}}
+{\footnotesize\ttfamily const size\+\_\+t S\+H\+E\+L\+F\+\_\+\+C\+A\+P\+A\+C\+I\+TY = 10}
+

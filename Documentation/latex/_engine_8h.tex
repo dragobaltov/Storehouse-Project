@@ -1,0 +1,83 @@
+\hypertarget{_engine_8h}{}\doxysection{Start/\+Engine.h File Reference}
+\label{_engine_8h}\index{Start/Engine.h@{Start/Engine.h}}
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_engine}{Engine}}
+\begin{DoxyCompactList}\small\item\em Handles user input and executes basic commands(open, close, save, save as, help, exit) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}} \{ \mbox{\hyperlink{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70ba7cef8a734855777c2a9d0caf42666e69}{Status\+::open}}, 
+\mbox{\hyperlink{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70ba349e686330723975502e9ef4f939a5ac}{Status\+::closed}}, 
+\mbox{\hyperlink{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70baf24f62eeb789199b9b2e467df3b1876b}{Status\+::exit}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{_engine_8h_ac58059ff194745c0afeb13db1f7c38d1}{to\+\_\+lower}} (const std\+::string \&)
+\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{_engine_8h_a64e8bb53ffdf2adda520edf2ab9fcfc8}{split\+\_\+in\+\_\+two}} (const std\+::string \&, char)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{_engine_8h_a5ba7e9bd840cd674a1e197a98369091c}{I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+M\+SG}} = \char`\"{}Invalid action! There is no opened file.\textbackslash{}n\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{_engine_8h_a9ac6d7a3038229d8641675c098f796c8}{I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+M\+SG}} = \char`\"{}File name cannot be empty string!\textbackslash{}n\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}\label{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}} 
+\index{Engine.h@{Engine.h}!Status@{Status}}
+\index{Status@{Status}!Engine.h@{Engine.h}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Enum class that represents if there is an open file or if the user has given command to exit the program. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{open@{open}!Engine.h@{Engine.h}}\index{Engine.h@{Engine.h}!open@{open}}}\mbox{\Hypertarget{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70ba7cef8a734855777c2a9d0caf42666e69}\label{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70ba7cef8a734855777c2a9d0caf42666e69}} 
+open&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{closed@{closed}!Engine.h@{Engine.h}}\index{Engine.h@{Engine.h}!closed@{closed}}}\mbox{\Hypertarget{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70ba349e686330723975502e9ef4f939a5ac}\label{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70ba349e686330723975502e9ef4f939a5ac}} 
+closed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{exit@{exit}!Engine.h@{Engine.h}}\index{Engine.h@{Engine.h}!exit@{exit}}}\mbox{\Hypertarget{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70baf24f62eeb789199b9b2e467df3b1876b}\label{_engine_8h_a67a0db04d321a74b7e7fcfd3f1a3f70baf24f62eeb789199b9b2e467df3b1876b}} 
+exit&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_engine_8h_a64e8bb53ffdf2adda520edf2ab9fcfc8}\label{_engine_8h_a64e8bb53ffdf2adda520edf2ab9fcfc8}} 
+\index{Engine.h@{Engine.h}!split\_in\_two@{split\_in\_two}}
+\index{split\_in\_two@{split\_in\_two}!Engine.h@{Engine.h}}
+\doxysubsubsection{\texorpdfstring{split\_in\_two()}{split\_in\_two()}}
+{\footnotesize\ttfamily std\+::pair$<$std\+::string, std\+::string$>$ split\+\_\+in\+\_\+two (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{,  }\item[{char}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_engine_8h_ac58059ff194745c0afeb13db1f7c38d1}\label{_engine_8h_ac58059ff194745c0afeb13db1f7c38d1}} 
+\index{Engine.h@{Engine.h}!to\_lower@{to\_lower}}
+\index{to\_lower@{to\_lower}!Engine.h@{Engine.h}}
+\doxysubsubsection{\texorpdfstring{to\_lower()}{to\_lower()}}
+{\footnotesize\ttfamily std\+::string to\+\_\+lower (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_engine_8h_a5ba7e9bd840cd674a1e197a98369091c}\label{_engine_8h_a5ba7e9bd840cd674a1e197a98369091c}} 
+\index{Engine.h@{Engine.h}!INVALID\_ACTION\_MSG@{INVALID\_ACTION\_MSG}}
+\index{INVALID\_ACTION\_MSG@{INVALID\_ACTION\_MSG}!Engine.h@{Engine.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_ACTION\_MSG}{INVALID\_ACTION\_MSG}}
+{\footnotesize\ttfamily const std\+::string I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+M\+SG = \char`\"{}Invalid action! There is no opened file.\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{_engine_8h_a9ac6d7a3038229d8641675c098f796c8}\label{_engine_8h_a9ac6d7a3038229d8641675c098f796c8}} 
+\index{Engine.h@{Engine.h}!INVALID\_FILE\_NAME\_MSG@{INVALID\_FILE\_NAME\_MSG}}
+\index{INVALID\_FILE\_NAME\_MSG@{INVALID\_FILE\_NAME\_MSG}!Engine.h@{Engine.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_FILE\_NAME\_MSG}{INVALID\_FILE\_NAME\_MSG}}
+{\footnotesize\ttfamily const std\+::string I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+M\+SG = \char`\"{}File name cannot be empty string!\textbackslash{}n\char`\"{}}
+

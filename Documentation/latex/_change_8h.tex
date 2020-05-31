@@ -1,0 +1,68 @@
+\hypertarget{_change_8h}{}\doxysection{Start/\+Change.h File Reference}
+\label{_change_8h}\index{Start/Change.h@{Start/Change.h}}
+{\ttfamily \#include \char`\"{}Date.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Product\+Info.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_change}{Change}}
+\begin{DoxyCompactList}\small\item\em Keeps the info for a change. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_change_8h_a293ba931937e469a6327b8d6b4872969}{Change\+Type}} \{ \mbox{\hyperlink{_change_8h_a293ba931937e469a6327b8d6b4872969ab60ed88355ac3f6898fd8a7ab1734d06}{Change\+Type\+::added}}, 
+\mbox{\hyperlink{_change_8h_a293ba931937e469a6327b8d6b4872969ab07286ebbb5bc7aa91cc3eaa8bc19711}{Change\+Type\+::removed}}, 
+\mbox{\hyperlink{_change_8h_a293ba931937e469a6327b8d6b4872969aa4700e713f1af77bf91ee2f9242cbb0b}{Change\+Type\+::cleaned}}, 
+\mbox{\hyperlink{_change_8h_a293ba931937e469a6327b8d6b4872969a5e543256c480ac577d30f76f9120eb74}{Change\+Type\+::undefined}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_change_8h_a6516d5d4368f193071900b7110928d04}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{class_change}{Change}} \&)
+\item 
+std\+::istream \& \mbox{\hyperlink{_change_8h_a81487cbc466d578c7ea5b80d71f137fc}{operator$>$$>$}} (std\+::istream \&, \mbox{\hyperlink{class_change}{Change}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_change_8h_a293ba931937e469a6327b8d6b4872969}\label{_change_8h_a293ba931937e469a6327b8d6b4872969}} 
+\index{Change.h@{Change.h}!ChangeType@{ChangeType}}
+\index{ChangeType@{ChangeType}!Change.h@{Change.h}}
+\doxysubsubsection{\texorpdfstring{ChangeType}{ChangeType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_change_8h_a293ba931937e469a6327b8d6b4872969}{Change\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Represents the type of the change.~\newline
+Possible values\+: added, removed, cleaned, undefined \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{added@{added}!Change.h@{Change.h}}\index{Change.h@{Change.h}!added@{added}}}\mbox{\Hypertarget{_change_8h_a293ba931937e469a6327b8d6b4872969ab60ed88355ac3f6898fd8a7ab1734d06}\label{_change_8h_a293ba931937e469a6327b8d6b4872969ab60ed88355ac3f6898fd8a7ab1734d06}} 
+added&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{removed@{removed}!Change.h@{Change.h}}\index{Change.h@{Change.h}!removed@{removed}}}\mbox{\Hypertarget{_change_8h_a293ba931937e469a6327b8d6b4872969ab07286ebbb5bc7aa91cc3eaa8bc19711}\label{_change_8h_a293ba931937e469a6327b8d6b4872969ab07286ebbb5bc7aa91cc3eaa8bc19711}} 
+removed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cleaned@{cleaned}!Change.h@{Change.h}}\index{Change.h@{Change.h}!cleaned@{cleaned}}}\mbox{\Hypertarget{_change_8h_a293ba931937e469a6327b8d6b4872969aa4700e713f1af77bf91ee2f9242cbb0b}\label{_change_8h_a293ba931937e469a6327b8d6b4872969aa4700e713f1af77bf91ee2f9242cbb0b}} 
+cleaned&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{undefined@{undefined}!Change.h@{Change.h}}\index{Change.h@{Change.h}!undefined@{undefined}}}\mbox{\Hypertarget{_change_8h_a293ba931937e469a6327b8d6b4872969a5e543256c480ac577d30f76f9120eb74}\label{_change_8h_a293ba931937e469a6327b8d6b4872969a5e543256c480ac577d30f76f9120eb74}} 
+undefined&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_change_8h_a6516d5d4368f193071900b7110928d04}\label{_change_8h_a6516d5d4368f193071900b7110928d04}} 
+\index{Change.h@{Change.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Change.h@{Change.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{,  }\item[{const \mbox{\hyperlink{class_change}{Change}} \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_change_8h_a81487cbc466d578c7ea5b80d71f137fc}\label{_change_8h_a81487cbc466d578c7ea5b80d71f137fc}} 
+\index{Change.h@{Change.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Change.h@{Change.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{,  }\item[{\mbox{\hyperlink{class_change}{Change}} \&}]{ }\end{DoxyParamCaption})}
+

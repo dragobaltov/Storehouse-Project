@@ -1,0 +1,69 @@
+\hypertarget{class_change}{}\doxysection{Change Class Reference}
+\label{class_change}\index{Change@{Change}}
+
+
+Keeps the info for a change.  
+
+
+
+
+{\ttfamily \#include $<$Change.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_change_a0d9358701f9a0ba3ed346f6426fa2df3}\label{class_change_a0d9358701f9a0ba3ed346f6426fa2df3}} 
+{\bfseries Change} (Change\+Type, const \mbox{\hyperlink{class_product_info}{Product\+Info}} \&, const \mbox{\hyperlink{class_date}{Date}} \&)
+\item 
+\mbox{\Hypertarget{class_change_a68b3d31eb0fc9845620fe6168a1eb023}\label{class_change_a68b3d31eb0fc9845620fe6168a1eb023}} 
+{\bfseries Change} (const \mbox{\hyperlink{class_change}{Change}} \&)
+\item 
+\mbox{\Hypertarget{class_change_a78f50e16e05a88bb1fbfb0e6bf1b4813}\label{class_change_a78f50e16e05a88bb1fbfb0e6bf1b4813}} 
+\mbox{\hyperlink{class_change}{Change}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_change}{Change}} \&)
+\item 
+void \mbox{\hyperlink{class_change_af3297b4b43e87d76c8bd2b7073e76274}{print}} (std\+::ostream \&) const
+\item 
+\mbox{\Hypertarget{class_change_a8bd6f88489049f7d5901bc54d63c9320}\label{class_change_a8bd6f88489049f7d5901bc54d63c9320}} 
+const \mbox{\hyperlink{class_date}{Date}} \& {\bfseries get\+\_\+date} () const
+\item 
+\mbox{\Hypertarget{class_change_a8a3dddc2f4c2ac8182474c0a3261050b}\label{class_change_a8a3dddc2f4c2ac8182474c0a3261050b}} 
+const Change\+Type {\bfseries get\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{class_change_ae315f23569b70eb45de14931f489d00b}\label{class_change_ae315f23569b70eb45de14931f489d00b}} 
+const \mbox{\hyperlink{class_product_info}{Product\+Info}} \& {\bfseries get\+\_\+info} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_change_a75cb1884ab086cfac445b16fb8442c77}\label{class_change_a75cb1884ab086cfac445b16fb8442c77}} 
+Change\+Type {\bfseries m\+\_\+type} \{Change\+Type\+::undefined\}
+\item 
+\mbox{\Hypertarget{class_change_a95662d4e4ad45d819ebf3262ec593dc1}\label{class_change_a95662d4e4ad45d819ebf3262ec593dc1}} 
+\mbox{\hyperlink{class_product_info}{Product\+Info}} {\bfseries m\+\_\+product\+\_\+info} \{\}
+\item 
+\mbox{\Hypertarget{class_change_ae8d7dfcc20f302be23273c4a29371651}\label{class_change_ae8d7dfcc20f302be23273c4a29371651}} 
+\mbox{\hyperlink{class_date}{Date}} {\bfseries m\+\_\+date} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Keeps the info for a change. 
+
+Contains\+:~\newline
+ type, which is of type enum Change\+Type. Indicates the type of the change that was made -\/ added, removed or cleaned.~\newline
+date -\/ the date when the change was made~\newline
+product info -\/ object of type \mbox{\hyperlink{class_product_info}{Product\+Info}} -\/ gives a short description of the product 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_change_af3297b4b43e87d76c8bd2b7073e76274}\label{class_change_af3297b4b43e87d76c8bd2b7073e76274}} 
+\index{Change@{Change}!print@{print}}
+\index{print@{print}!Change@{Change}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Change\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+Prints the change in the format\+: \char`\"{}type product\+\_\+info date\char`\"{} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Start/Change.\+h\item 
+Start/Change.\+cpp\end{DoxyCompactItemize}

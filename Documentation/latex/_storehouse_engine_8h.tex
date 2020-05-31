@@ -1,0 +1,54 @@
+\hypertarget{_storehouse_engine_8h}{}\doxysection{Start/\+Storehouse\+Engine.h File Reference}
+\label{_storehouse_engine_8h}\index{Start/StorehouseEngine.h@{Start/StorehouseEngine.h}}
+{\ttfamily \#include \char`\"{}Engine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Storehouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Change.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_storehouse_engine}{Storehouse\+Engine}}
+\begin{DoxyCompactList}\small\item\em The class deals with user input and generates data for \mbox{\hyperlink{class_storehouse}{Storehouse}} class methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::regex \mbox{\hyperlink{_storehouse_engine_8h_ab7e5be0dacc0f6820e482579113065da}{D\+A\+T\+E\+\_\+\+F\+O\+R\+M\+AT}} (\char`\"{}$^\wedge$20\mbox{[}0-\/9\mbox{]}\{2\}-\/((0?\mbox{[}1-\/9\mbox{]})$\vert$(1\mbox{[}0-\/2\mbox{]}))-\/((\mbox{[}12\mbox{]}\mbox{[}0-\/9\mbox{]})$\vert$(3\mbox{[}01\mbox{]})$\vert$(0?\mbox{[}1-\/9\mbox{]})$\vert$)\$\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const size\+\_\+t \mbox{\hyperlink{_storehouse_engine_8h_a751e7ec1c13e6387b90f3274f1a61794}{C\+O\+U\+N\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS}} = 12
+\item 
+const std\+::string \mbox{\hyperlink{_storehouse_engine_8h_a58688dc99973d1f245f4dbcd368c5ba2}{V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+N\+DS}} \mbox{[}\mbox{\hyperlink{_storehouse_engine_8h_a751e7ec1c13e6387b90f3274f1a61794}{C\+O\+U\+N\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_storehouse_engine_8h_ab7e5be0dacc0f6820e482579113065da}\label{_storehouse_engine_8h_ab7e5be0dacc0f6820e482579113065da}} 
+\index{StorehouseEngine.h@{StorehouseEngine.h}!DATE\_FORMAT@{DATE\_FORMAT}}
+\index{DATE\_FORMAT@{DATE\_FORMAT}!StorehouseEngine.h@{StorehouseEngine.h}}
+\doxysubsubsection{\texorpdfstring{DATE\_FORMAT()}{DATE\_FORMAT()}}
+{\footnotesize\ttfamily const std\+::regex D\+A\+T\+E\+\_\+\+F\+O\+R\+M\+AT (\begin{DoxyParamCaption}\item[{\char`\"{}$^\wedge$20\{2\}-\/((0?\mbox{[}1-\/9\mbox{]})$\vert$(1\mbox{[}0-\/2\mbox{]}))-\/((\mbox{[}12\mbox{]}\mbox{[}0-\/9\mbox{]})$\vert$(3\mbox{[}01\mbox{]})$\vert$(0?\mbox{[}1-\/9\mbox{]})$\vert$)\$\char`\"{}}]{\mbox{[}0-\/9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_storehouse_engine_8h_a751e7ec1c13e6387b90f3274f1a61794}\label{_storehouse_engine_8h_a751e7ec1c13e6387b90f3274f1a61794}} 
+\index{StorehouseEngine.h@{StorehouseEngine.h}!COUNT\_COMMANDS@{COUNT\_COMMANDS}}
+\index{COUNT\_COMMANDS@{COUNT\_COMMANDS}!StorehouseEngine.h@{StorehouseEngine.h}}
+\doxysubsubsection{\texorpdfstring{COUNT\_COMMANDS}{COUNT\_COMMANDS}}
+{\footnotesize\ttfamily const size\+\_\+t C\+O\+U\+N\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS = 12}
+
+\mbox{\Hypertarget{_storehouse_engine_8h_a58688dc99973d1f245f4dbcd368c5ba2}\label{_storehouse_engine_8h_a58688dc99973d1f245f4dbcd368c5ba2}} 
+\index{StorehouseEngine.h@{StorehouseEngine.h}!VALID\_COMMANDS@{VALID\_COMMANDS}}
+\index{VALID\_COMMANDS@{VALID\_COMMANDS}!StorehouseEngine.h@{StorehouseEngine.h}}
+\doxysubsubsection{\texorpdfstring{VALID\_COMMANDS}{VALID\_COMMANDS}}
+{\footnotesize\ttfamily const std\+::string V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+N\+DS\mbox{[}\mbox{\hyperlink{_storehouse_engine_8h_a751e7ec1c13e6387b90f3274f1a61794}{C\+O\+U\+N\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ \textcolor{stringliteral}{"open"}, \textcolor{stringliteral}{"save"}, \textcolor{stringliteral}{"saveas"}, \textcolor{stringliteral}{"close"}, \textcolor{stringliteral}{"exit"}, \textcolor{stringliteral}{"help"},}
+\DoxyCodeLine{                                      \textcolor{stringliteral}{"print"}, \textcolor{stringliteral}{"add"}, \textcolor{stringliteral}{"remove"}, \textcolor{stringliteral}{"clean"}, \textcolor{stringliteral}{"log"}, \textcolor{stringliteral}{"loss"} \}}
+
+\end{DoxyCode}

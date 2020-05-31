@@ -2,6 +2,10 @@
 #include "Place.h"
 #include <string>
 
+/* \brief Contains a short info about a product.
+ *
+ * Keeps name, quantity, unit and place of a product.
+*/
 class ProductInfo
 {
 	friend std::ostream& operator<<(std::ostream&, const ProductInfo&);

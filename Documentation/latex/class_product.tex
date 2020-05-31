@@ -1,0 +1,144 @@
+\hypertarget{class_product}{}\doxysection{Product Class Reference}
+\label{class_product}\index{Product@{Product}}
+
+
+Keeps all the needed information about a product.  
+
+
+
+
+{\ttfamily \#include $<$Product.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_a0fdcd757dda587506f797f117e0b5e66}\label{class_product_a0fdcd757dda587506f797f117e0b5e66}} 
+{\bfseries Product} (const std\+::string \&, const \mbox{\hyperlink{class_date}{Date}} \&, const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&, const std\+::string \&, size\+\_\+t, const \mbox{\hyperlink{class_place}{Place}} \&, const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_product_a1501850a788f9ec7cb5de7583c44a6ee}\label{class_product_a1501850a788f9ec7cb5de7583c44a6ee}} 
+{\bfseries Product} (const \mbox{\hyperlink{class_product}{Product}} \&)
+\item 
+\mbox{\Hypertarget{class_product_a8fc4034b949c3a6d1dfee69775abb7b3}\label{class_product_a8fc4034b949c3a6d1dfee69775abb7b3}} 
+\mbox{\hyperlink{class_product}{Product}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_product}{Product}} \&)
+\item 
+\mbox{\Hypertarget{class_product_a0ce763dd6391a457b7240c60fa91c0e9}\label{class_product_a0ce763dd6391a457b7240c60fa91c0e9}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_product}{Product}} \&) const
+\item 
+\mbox{\Hypertarget{class_product_aa808cc85583e882495f0aef72e94b359}\label{class_product_aa808cc85583e882495f0aef72e94b359}} 
+void {\bfseries set\+\_\+name} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_product_a0a3f5a2c0ece983f6f4477eaaacd6f2d}\label{class_product_a0a3f5a2c0ece983f6f4477eaaacd6f2d}} 
+void {\bfseries set\+\_\+expiration\+\_\+date} (const \mbox{\hyperlink{class_date}{Date}} \&)
+\item 
+\mbox{\Hypertarget{class_product_a3376d8ea0bebcadd1bab414a7dfd0349}\label{class_product_a3376d8ea0bebcadd1bab414a7dfd0349}} 
+void {\bfseries set\+\_\+arrival\+\_\+date} (const \mbox{\hyperlink{class_date}{Date}} \&)
+\item 
+\mbox{\Hypertarget{class_product_acf48fb858edc2f8f2d00edaf430b0505}\label{class_product_acf48fb858edc2f8f2d00edaf430b0505}} 
+void {\bfseries set\+\_\+manifacturer\+\_\+name} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_product_a591fd20edf4ecec8a6df668989210e8c}\label{class_product_a591fd20edf4ecec8a6df668989210e8c}} 
+void {\bfseries set\+\_\+unit} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_product_a2f786f90e0b24b4d9e1a2132c939d2dd}\label{class_product_a2f786f90e0b24b4d9e1a2132c939d2dd}} 
+void {\bfseries set\+\_\+quantity} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_product_adbdbf097d632afc84bd8f4185b9316a1}\label{class_product_adbdbf097d632afc84bd8f4185b9316a1}} 
+void {\bfseries set\+\_\+place} (const \mbox{\hyperlink{class_place}{Place}} \&)
+\item 
+\mbox{\Hypertarget{class_product_af49ba758452a583a4042d487e6f18ced}\label{class_product_af49ba758452a583a4042d487e6f18ced}} 
+void {\bfseries set\+\_\+comment} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_product_a7337d87bdeed81529a91f0032e182326}\label{class_product_a7337d87bdeed81529a91f0032e182326}} 
+const std\+::string \& {\bfseries get\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_product_ae1b7468670187e5e577090072408dc86}\label{class_product_ae1b7468670187e5e577090072408dc86}} 
+const \mbox{\hyperlink{class_date}{Date}} \& {\bfseries get\+\_\+expiration\+\_\+date} () const
+\item 
+\mbox{\Hypertarget{class_product_ab69cfafa531290790bec52079442de77}\label{class_product_ab69cfafa531290790bec52079442de77}} 
+const \mbox{\hyperlink{class_date}{Date}} \& {\bfseries get\+\_\+arrival\+\_\+date} () const
+\item 
+\mbox{\Hypertarget{class_product_a67513f30c905120cb73e2d238890427d}\label{class_product_a67513f30c905120cb73e2d238890427d}} 
+const std\+::string \& {\bfseries get\+\_\+manifacturer\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_product_a982ae485887b1c2b5192e0f263ec6db8}\label{class_product_a982ae485887b1c2b5192e0f263ec6db8}} 
+const std\+::string \& {\bfseries get\+\_\+unit} () const
+\item 
+\mbox{\Hypertarget{class_product_a83be3ffb2234547d03642224628840eb}\label{class_product_a83be3ffb2234547d03642224628840eb}} 
+size\+\_\+t {\bfseries get\+\_\+quantity} () const
+\item 
+\mbox{\Hypertarget{class_product_a023c16daa56275264822dd5e0a8162d9}\label{class_product_a023c16daa56275264822dd5e0a8162d9}} 
+const \mbox{\hyperlink{class_place}{Place}} \& {\bfseries get\+\_\+place} () const
+\item 
+\mbox{\Hypertarget{class_product_a9d434d7ed5351a69a0e3b29370bfda9b}\label{class_product_a9d434d7ed5351a69a0e3b29370bfda9b}} 
+const std\+::string \& {\bfseries get\+\_\+comment} () const
+\item 
+\mbox{\hyperlink{class_product_info}{Product\+Info}} \mbox{\hyperlink{class_product_affa385b2f17f006376e15c19f6613285}{get\+\_\+short\+\_\+info}} () const
+\item 
+\mbox{\Hypertarget{class_product_aa38644fc7f31ce300db2994aece97037}\label{class_product_aa38644fc7f31ce300db2994aece97037}} 
+void {\bfseries increase\+\_\+quantity} (size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_product_a6dca801838ef892b6640fd95ff333ad1}\label{class_product_a6dca801838ef892b6640fd95ff333ad1}} 
+void {\bfseries decrease\+\_\+quantity} (size\+\_\+t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_ac0d9d98fa79677810f1b72c4f5ed6851}\label{class_product_ac0d9d98fa79677810f1b72c4f5ed6851}} 
+void {\bfseries set\+\_\+data} (const std\+::string \&, const \mbox{\hyperlink{class_date}{Date}} \&, const \mbox{\hyperlink{class_date}{Date}} \&, const std\+::string \&, const std\+::string \&, size\+\_\+t, const \mbox{\hyperlink{class_place}{Place}} \&, const std\+::string \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_ad9606cfc985df10f9bd222cfd8db5380}\label{class_product_ad9606cfc985df10f9bd222cfd8db5380}} 
+std\+::string {\bfseries m\+\_\+name}
+\item 
+\mbox{\Hypertarget{class_product_a4cd6a47d890cbde5aacc542f1dc4e391}\label{class_product_a4cd6a47d890cbde5aacc542f1dc4e391}} 
+\mbox{\hyperlink{class_date}{Date}} {\bfseries m\+\_\+expiration\+\_\+date}
+\item 
+\mbox{\Hypertarget{class_product_a1c4450fcf736edcf4341d6e713748e9f}\label{class_product_a1c4450fcf736edcf4341d6e713748e9f}} 
+\mbox{\hyperlink{class_date}{Date}} {\bfseries m\+\_\+arrival\+\_\+date}
+\item 
+\mbox{\Hypertarget{class_product_acf6445984ce1c859d1670328bb6beb9a}\label{class_product_acf6445984ce1c859d1670328bb6beb9a}} 
+std\+::string {\bfseries m\+\_\+manifacturer\+\_\+name}
+\item 
+\mbox{\Hypertarget{class_product_ac64e783ca64f6c6022d87db1d6092126}\label{class_product_ac64e783ca64f6c6022d87db1d6092126}} 
+std\+::string {\bfseries m\+\_\+unit}
+\item 
+\mbox{\Hypertarget{class_product_a0710ec8d347325f80ee7efc4dad22396}\label{class_product_a0710ec8d347325f80ee7efc4dad22396}} 
+size\+\_\+t {\bfseries m\+\_\+quantity}
+\item 
+\mbox{\Hypertarget{class_product_a12b58793d953e9312bec87230c006677}\label{class_product_a12b58793d953e9312bec87230c006677}} 
+\mbox{\hyperlink{class_place}{Place}} {\bfseries m\+\_\+place}
+\item 
+\mbox{\Hypertarget{class_product_aeb093d6db21edf20758cef2683c5b423}\label{class_product_aeb093d6db21edf20758cef2683c5b423}} 
+std\+::string {\bfseries m\+\_\+comment}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_a774a6edf6dbed64d2cb13e8920ace7cf}\label{class_product_a774a6edf6dbed64d2cb13e8920ace7cf}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{class_product}{Product}} \&)
+\item 
+\mbox{\Hypertarget{class_product_a75f64e78db1f9ca6452ac75c8cae6f60}\label{class_product_a75f64e78db1f9ca6452ac75c8cae6f60}} 
+std\+::istream \& {\bfseries operator$>$$>$} (std\+::istream \&, \mbox{\hyperlink{class_product}{Product}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Keeps all the needed information about a product. 
+
+Contains name, expiration date, arrival date, manufacturer name, unit, quantity, place and a comment. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_product_affa385b2f17f006376e15c19f6613285}\label{class_product_affa385b2f17f006376e15c19f6613285}} 
+\index{Product@{Product}!get\_short\_info@{get\_short\_info}}
+\index{get\_short\_info@{get\_short\_info}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{get\_short\_info()}{get\_short\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_product_info}{Product\+Info}} Product\+::get\+\_\+short\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns an object of type \mbox{\hyperlink{class_product_info}{Product\+Info}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Start/Product.\+h\item 
+Start/Product.\+cpp\end{DoxyCompactItemize}

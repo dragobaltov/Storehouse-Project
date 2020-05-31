@@ -10,6 +10,7 @@ const size_t COUNT_COMMANDS = 12;
 const std::string VALID_COMMANDS[COUNT_COMMANDS] = { "open", "save", "saveas", "close", "exit", "help",
 									  "print", "add", "remove", "clean", "log", "loss" };
 
+/*! \brief The class deals with user input and generates data for Storehouse class methods.*/
 class StorehouseEngine : public Engine
 {
 public:

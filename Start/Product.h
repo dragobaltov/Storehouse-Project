@@ -13,6 +13,10 @@ std::string to_lower(const std::string&);
 int get_first_index(const std::string&, char);
 std::string get_data(std::istream&);
 
+/*! \brief Keeps all the needed information about a product
+ *
+ * Contains name, expiration date, arrival date, manufacturer name, unit, quantity, place and a comment.
+*/
 class Product
 {
 	friend std::ostream& operator<<(std::ostream&, const Product&);

@@ -24,6 +24,7 @@ Change& Change::operator=(const Change& other)
 	return *this;
 }
 
+/*! Prints the change in the format: "type product_info date"*/
 void Change::print(std::ostream& out) const
 {
 	std::string result = "";
@@ -107,35 +108,4 @@ std::istream& operator>>(std::istream& in, Change& change)
 	change = Change(type, { info_str }, { date_str });
 
 	return in;
-
-	/*std::vector<std::string> tokens{};
-	split(line, tokens, ' ');
-
-	ChangeType type;
-
-	if (tokens[0] == "added")
-	{
-		type = ChangeType::added;
-	}
-	else if (tokens[0] == "removed")
-	{
-		type = ChangeType::removed;
-	}
-	else
-	{
-		type = ChangeType::undefined;
-	}
-
-	Date date = { tokens[tokens.size() - 1] };
-	std::string info = "";
-
-	for (size_t i = 1; i < tokens.size() - 2; ++i)
-	{
-		info += tokens[i] + ' ';
-	}
-	info += tokens[tokens.size() - 2];
-
-	change = Change(type, info, date);
-
-	return in;*/
 }

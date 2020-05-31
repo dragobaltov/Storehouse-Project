@@ -8,6 +8,10 @@ const size_t COUNT_SHELVES = 10;
 const size_t SHELF_CAPACITY = 10;
 const size_t CAPACITY = COUNT_SHELVES * SHELF_CAPACITY;
 
+/*! \brief Represents a section in the storehouse.
+ *
+ * Keeps section number and vector of products.
+*/
 class Section
 {
 public:

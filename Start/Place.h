@@ -3,6 +3,10 @@
 #include <string>
 #pragma once
 
+/*! \brief Describes the location of a product in the storehouse.
+ * 
+ * Contains section, shelf and cell number.
+*/
 class Place
 {
 	friend std::ostream& operator<<(std::ostream&, const Place&);

@@ -178,6 +178,7 @@ std::istream& operator>>(std::istream& in, Product& pr)
 	return in;
 }
 
+/*! Returns an object of type ProductInfo*/
 ProductInfo Product::get_short_info() const
 {
 	return {m_name, m_unit, m_quantity, m_place};
@@ -222,25 +223,6 @@ bool is_in_units(const std::string& unit)
 
 	return false;
 }
-
-/*std::string to_lower(const std::string& text)
-{
-	std::string lower = "";
-
-	for (char l : text)
-	{
-		if (l >= 'A' && l <= 'Z')
-		{
-			lower += (l + ('a' - 'A'));
-		}
-		else
-		{
-			lower += l;
-		}
-	}
-
-	return lower;
-}*/
 
 int get_first_index(const std::string& text, char delimeter)
 {

@@ -2,7 +2,8 @@
 #include "Date.h"
 #include "ProductInfo.h"
 
-
+/*! Represents the type of the change.\n
+ * Possible values: added, removed, cleaned, undefined*/
 enum class ChangeType
 {
 	added,
@@ -11,6 +12,13 @@ enum class ChangeType
 	undefined
 };
 
+/*! \brief Keeps the info for a change.
+ *
+ * Contains:\n 
+ * type, which is of type enum ChangeType. Indicates the type of the change that was made - added, removed or cleaned.\n
+ * date - the date when the change was made\n
+ * product info - object of type ProductInfo - gives a short description of the product
+*/
 class Change
 {
 public:
